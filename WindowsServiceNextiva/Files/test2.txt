@@ -1,0 +1,17 @@
+Referencias
+Para obtener más información sobre cómo conceder permisos de NTFS para contenido Web y de servidor Web, consulte el tema "Control de acceso" en la sección "Seguridad" de la documentación en pantalla de IIS 5.0. Para ver la documentación, inicie Microsoft Internet Explorer en el servidor de IIS 5.0 y, a continuación, escriba la siguiente dirección en la barra de direcciones :
+
+http://localhost/iisHelp/
+Para obtener más información acerca de cómo controlar el acceso al contenido Web, haga clic en los números de artículo siguientes para verlos en Microsoft Knowledge Base:
+
+300985 cómo configurar el acceso de usuario y de grupo en una intranet basada en Windows NT 4.0 o Windows 2000
+
+Permisos de lista de NTFS 187506 necesarios para que el sitio IIS funcione
+
+Permisos de NTFS mínimos 271071 requeridos para que IIS 5.0 trabajar
+
+Para obtener más información acerca de la seguridad IIS, haga clic en los números de artículo siguientes para verlos en Microsoft Knowledge Base:
+
+282060 recursos para proteger servicios de Internet Information Server
+
+266115 recursos para instalar y utilizar IIS 5.0

@@ -1,0 +1,272 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/*   CSS PANEL  */
+
+#DivHeader{
+     width:100%;
+	 height:30px;	
+	 background:#f5f5f5;
+     border-bottom:solid 1px #eceaea;	 
+}
+
+#DivSubHeader{
+     width:100%;
+	 height:70px; 
+	 background:url('../img/1.png');
+}
+#DivSubHeaderLeft{
+     float:left;
+	 margin-left:20px;
+	 margin-top:10px;
+}
+
+
+
+#DivServices ul {
+     margin:5px 0 0 0;
+	 padding:0;
+}
+#DivServices li {
+     padding:0 0 0 8px;
+}
+#DivServices ul li{
+     display:inline;
+	 list-style-type:none;
+}
+
+#DivBody{
+     width:100%;
+	 height:90%;
+	 margin-top:1%;
+}
+#DivServices{
+     float:left;
+	 margin:0 0 0 0 20px;
+}
+#DivSession{
+     float:right;
+	 margin:5px 20px 0 0;
+}
+#DivBodyLeft{
+     width:18%;
+     float:left;
+	 margin-left:20px;	 
+}
+#DivBoxSession{
+     width:99%;
+	 height:200px;
+	 border:solid 1px #aaaaaa;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;	 
+}
+#DivBodyRight{
+     width:78%;
+     float:right;
+	 margin-right:20px;
+}
+
+/* CSS MENU */
+
+.BoxMenu{
+     width:200px;
+	 height:250px;
+	 float:left;
+	 margin:20px 0 0 20px;
+	 padding:5px;
+	 text-align:center;
+     border:solid 1px #CCCCCC;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;		
+}
+.BoxMenu ul {
+     margin:0;
+	 padding:0;
+}
+.BoxMenu li {
+     padding:0 0 0 8px;
+}
+.BoxMenu ul li{
+
+	 list-style-type:none;
+}
+
+.LnkPerfil{
+     background: url('../img/id-card.png') no-repeat left center;
+	 padding:3px 0 3px 30px;
+}
+
+/* CSS FORMULARIOS */
+
+#DivHeadFrm{
+     width:99%;
+	 height:35px;
+	 border-bottom:solid 1px #aaaaaa;
+	/* background:url('../img/borde.png');
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;*/		 
+}
+#DivSearchFrm{
+     width:99%;
+	 height:33px;
+	 margin-top:10px;
+	 border-bottom: solid #aaaaaa 1px;
+}
+#DivHeadFrmRight{
+     width:45%;
+	 height:23px;
+	 margin-top:6px;	 
+	 float:right;
+	 margin-right:10px;
+	 text-align:right;
+}
+
+#DivHeadFrmRight ul {
+     margin:0;
+	 padding:0;
+}
+#DivHeadFrmRight li{
+     padding:0 0 0 8px;
+	 border-left:solid 1px #999999;
+}
+#DivHeadFrmRight li.first{
+     padding:0 0 0 8px;
+	 border-left:none;
+}
+#DivHeadFrmRight ul li{
+     display:inline;
+	 list-style-type:none;
+}
+
+
+#DivHeadFrmLeft{
+     width:45%;
+	 height:23px;
+	 margin-top:5px;
+	 margin-left:10px;
+	 float:left;
+}
+#DivHeadFrmLeft h4{
+     font-weight:normal;
+     display:inline;
+	 color:#000;
+	 background:url('../img/go.png') no-repeat left center;
+	 padding:5px 0px 5px 35px;
+}
+#DivHeadFrmRight a{
+	 color:#000;
+}
+
+#DivFrmIngresoLeft{
+     width:40%;	 
+	 float:left;
+}
+#DivFrmIngresoRight{
+     width:55%;	 
+	 float:left;
+}
+
+#DivFrmIngresoRight-Container{
+     width:100%;
+	 height:45px;
+	 margin-top:23px;
+	 margin-bottom:5px;
+	 border-bottom:solid 1px #CCCCCC;
+	 font-weight:200;
+}
+
+#DivContainerImage{
+     margin-top:20px;
+}
+
+.CajaTexto{
+     width:180px;
+	 height:23px;	
+    border:solid 1px #cccccc;	
+    padding-left:10px;	
+}
+.CajaTextoSmall{
+     width:120px;
+	 height:23px;
+    border:solid 1px #cccccc;	
+    padding-left:10px;
+}
+.smallimg{
+     width:80px;
+	 height:70px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;	
+    border:solid 1px #f1f1f1;	 
+}
+.DivExportar{
+     width:98%;
+	 height:40px;
+	 margin:0 AUTO;
+	 background:#eceaea;
+    border-top:solid 2px #cccccc;	
+}
+
+
+
+
+
+
+
+
+#DivOptions{
+     width:100%;
+	 height:450px;
+}
+#DivOptionsTitle{
+     width:100%;
+	 height:30px;
+	 border-bottom:solid 1px #eceaea;
+}
+#DivOptionsContainer{
+     width:100%;
+	 height:400px;
+}
+.DivOptionsBox{
+     width:330px;
+	 height:110px;
+	 border:solid 1px #eceaea;
+	 float:left;
+	 margin:10px 0 0 10px;
+}
+.DivOptionsBoxLeft{
+     width:80px;
+	 height:80px;
+	 padding:10px;
+	 float:left;
+}
+.DivOptionsBoxRight{
+     width:190px;
+	 height:100%;
+	 float:right;
+}
+.DivOptionsBoxRight h4{
+	 color:#98bd0e;
+}
+.LnkSesion{ 
+     cursor:pointer;
+}
+.LnkSearch{
+     cursor:pointer;
+}
+.txWhite{
+     color:#FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+

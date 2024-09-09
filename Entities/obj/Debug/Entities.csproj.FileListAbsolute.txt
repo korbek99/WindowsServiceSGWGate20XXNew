@@ -1,0 +1,9 @@
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\Entities\bin\Debug\Entities.dll
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\Entities\bin\Debug\Entities.pdb
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\Entities\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\Entities\obj\Debug\Entities.dll
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\Entities\obj\Debug\Entities.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\Entities\bin\Debug\Entities.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\Entities\bin\Debug\Entities.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\Entities\obj\Debug\Entities.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\Entities\obj\Debug\Entities.pdb

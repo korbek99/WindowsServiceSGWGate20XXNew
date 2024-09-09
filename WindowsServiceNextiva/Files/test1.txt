@@ -1,0 +1,6 @@
+TASKLIST /V	Muestra información detallada de cada tarea ejecutándose.
+TASKLIST /SVC	Muestra información adicional de los servicios hospedados en cada proceso.
+TASKLIST /M modulo	Muestra todas las tareas que usan un módulo DLL o EXE especificado. Si no se indica el modulo se muestran todos los módulos cargados.
+TASKLIST /FO formato	Especifica el formato de salida. Puede ser: "TABLE", "LIST", "CSV".
+TASKLIST /NH	Si se usan los formatos "TABLE" y "CSV", especifica que el "encabezado de columna" no se debe mostrar.
+TASKLIST /FI filtro	Filtr

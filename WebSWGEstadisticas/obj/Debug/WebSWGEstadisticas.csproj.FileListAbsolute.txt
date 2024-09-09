@@ -1,0 +1,11 @@
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebSWGEstadisticas\bin\WebSWGEstadisticas.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebSWGEstadisticas\bin\WebSWGEstadisticas.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebSWGEstadisticas\obj\Debug\WebSWGEstadisticas.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebSWGEstadisticas\obj\Debug\WebSWGEstadisticas.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebSWGEstadisticas\bin\Business.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebSWGEstadisticas\bin\Entities.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebSWGEstadisticas\bin\DataAccess.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebSWGEstadisticas\bin\Business.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebSWGEstadisticas\bin\Entities.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebSWGEstadisticas\bin\DataAccess.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebSWGEstadisticas\obj\Debug\WebSWGEstadisticas.csprojResolveAssemblyReference.cache

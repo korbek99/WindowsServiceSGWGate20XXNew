@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebSWGEstadisticas.GIEstadisticas.Admin.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+
+    <link href="../../css/stylesM.css" rel="stylesheet" type="text/css" />
+   <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <div id='cssmenu'>
+                        <ul>
+                           <%--<li><a href='#'><span>Maestros</span></a></li>--%>
+                           <li class='active has-sub'><a href='#'><span>Administrador</span></a>
+                              <ul>
+                                 <li><a href="SC_Maestros/Clientes/ListClientes.aspx"><span>Estadisticas Empresas 1</span></a>
+                                   <%-- <ul>
+                                       <li><a href='#'><span>Sub Product</span></a></li>
+                                       <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                                    </ul>--%>
+                                 </li>
+                                 <li ><a href='SC_Maestros/ClientesExter/ListClientesExt.aspx'><span>Grafico 1</span></a></li>
+                                 <li ><a href='SC_Maestros/Proveedores/ListaProvee.aspx'><span>Grafico 2</span></a></li>
+                                 <li ><a href='SC_Maestros/FichaPersonal/ListaFicha.aspx'><span>Grafico 3</span></a></li>
+                                 <li class='last'><a href='SC_Maestros/BaseCurricular/ListaBase.aspx'><span>Grafico 4</span></a></li>
+                              </ul>
+
+                           </li>
+                           
+                        </ul>
+                        <ul>
+                           <%--<li><a href='#'><span>Maestros</span></a></li>--%>
+                           <li class='active has-sub'><a href='#'><span>Clientes</span></a>
+                              <ul>
+                                 <li><a href="SC_Maestros/Clientes/ListClientes.aspx"><span>Estadisticas Clientes</span></a>
+                                   <%-- <ul>
+                                       <li><a href='#'><span>Sub Product</span></a></li>
+                                       <li class='last'><a href='#'><span>Sub Product</span></a></li>
+                                    </ul>--%>
+                                 </li>
+                                <li ><a href='SC_Maestros/ClientesExter/ListClientesExt.aspx'><span>Grafico 1</span></a></li>
+                                 <li ><a href='SC_Maestros/Proveedores/ListaProvee.aspx'><span>Grafico 2</span></a></li>
+                                 <li ><a href='SC_Maestros/FichaPersonal/ListaFicha.aspx'><span>Grafico 3</span></a></li>
+                                 <li class='last'><a href='SC_Maestros/BaseCurricular/ListaBase.aspx'><span>Grafico 4</span></a></li>
+                              </ul>
+
+                           </li>
+                           
+                        </ul>
+               </div>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

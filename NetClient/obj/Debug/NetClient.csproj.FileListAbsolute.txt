@@ -1,0 +1,100 @@
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\bin\NetClient.exe
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\bin\NetClient.pdb
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.BaseForm.resources
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.Client.resources
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.FormDSM.resources
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.PlayForm.resources
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.Properties.Resources.resources
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.ReplayForm.resources
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.VideoWindow.resources
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.csproj.GenerateResource.Cache
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.exe
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.pdb
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\bin\Business.dll
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\bin\DataAccess.dll
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\bin\Entities.dll
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\bin\DataAccess.pdb
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\bin\Business.pdb
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\bin\Entities.pdb
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.CameraTrigger.resources
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.TriggersCamera.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.exe
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\bin\NetClient.exe
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\bin\NetClient.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\bin\Business.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\bin\Entities.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\bin\DataAccess.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\bin\DataAccess.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\bin\Business.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\bin\Entities.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.BaseForm.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.CameraTrigger.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.Client.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.FormDSM.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.PlayForm.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.Properties.Resources.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.ReplayForm.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.TriggersCamera.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.VideoWindow.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2008\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.csproj.GenerateResource.Cache
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.exe
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\bin\NetClient.exe
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\bin\NetClient.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\bin\Business.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\bin\Entities.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\bin\DataAccess.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\bin\Business.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\bin\Entities.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\bin\DataAccess.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.BaseForm.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.CameraTrigger.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.Client.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.FormDSM.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.PlayForm.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.Properties.Resources.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.ReplayForm.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.TriggersCamera.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.VideoWindow.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.csprojResolveAssemblyReference.cache
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.csproj.GenerateResource.Cache
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.EstadisticasNextiva.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\bin\NetClient.exe.config
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.MapaNextiva.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.ListaAlarmas.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.MDIMenu.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.Customers.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.LogErrores.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\NetClient\obj\Debug\NetClient.UserLog.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\bin\NetClient.exe.config
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.exe
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\bin\NetClient.exe
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\bin\NetClient.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\bin\Business.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\bin\Entities.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\bin\DataAccess.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\bin\Business.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\bin\Entities.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\bin\DataAccess.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.csprojResolveAssemblyReference.cache
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.BaseForm.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.CameraTrigger.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.Client.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.Customers.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.EstadisticasNextiva.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.FormDSM.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.ListaAlarmas.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.LogErrores.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.MapaNextiva.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.MDIMenu.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.PlayForm.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.Properties.Resources.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.ReplayForm.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.TriggersCamera.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.UserLog.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.VideoWindow.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\NetClient\obj\Debug\NetClient.csproj.GenerateResource.Cache

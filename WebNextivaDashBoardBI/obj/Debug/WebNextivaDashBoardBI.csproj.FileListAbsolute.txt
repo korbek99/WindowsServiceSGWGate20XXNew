@@ -1,0 +1,5 @@
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebNextivaDashBoardBI\bin\WebNextivaDashBoardBI.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebNextivaDashBoardBI\bin\WebNextivaDashBoardBI.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebNextivaDashBoardBI\obj\Debug\WebNextivaDashBoardBI.dll
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebNextivaDashBoardBI\obj\Debug\WebNextivaDashBoardBI.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WebNextivaDashBoardBI\obj\Debug\WebNextivaDashBoardBI.csprojResolveAssemblyReference.cache

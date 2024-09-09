@@ -1,0 +1,11 @@
+c:\users\administrator.id-w7-jb-pc\documents\visual studio 2010\Projects\WebNextivaEsta\WebNextivaEsta\bin\WebNextivaEsta.dll
+c:\users\administrator.id-w7-jb-pc\documents\visual studio 2010\Projects\WebNextivaEsta\WebNextivaEsta\bin\WebNextivaEsta.pdb
+c:\users\administrator.id-w7-jb-pc\documents\visual studio 2010\Projects\WebNextivaEsta\WebNextivaEsta\obj\Debug\WebNextivaEsta.dll
+c:\users\administrator.id-w7-jb-pc\documents\visual studio 2010\Projects\WebNextivaEsta\WebNextivaEsta\obj\Debug\WebNextivaEsta.pdb
+c:\users\administrator.id-w7-jb-pc\documents\visual studio 2010\Projects\WebNextivaEsta\WebNextivaEsta\obj\Debug\WebNextivaEsta.csprojResolveAssemblyReference.cache
+c:\users\administrator.id-w7-jb-pc\documents\visual studio 2010\Projects\WebNextivaEsta\WebNextivaEsta\bin\Business.dll
+c:\users\administrator.id-w7-jb-pc\documents\visual studio 2010\Projects\WebNextivaEsta\WebNextivaEsta\bin\Entities.dll
+c:\users\administrator.id-w7-jb-pc\documents\visual studio 2010\Projects\WebNextivaEsta\WebNextivaEsta\bin\DataAccess.dll
+c:\users\administrator.id-w7-jb-pc\documents\visual studio 2010\Projects\WebNextivaEsta\WebNextivaEsta\bin\Business.pdb
+c:\users\administrator.id-w7-jb-pc\documents\visual studio 2010\Projects\WebNextivaEsta\WebNextivaEsta\bin\Entities.pdb
+c:\users\administrator.id-w7-jb-pc\documents\visual studio 2010\Projects\WebNextivaEsta\WebNextivaEsta\bin\DataAccess.pdb

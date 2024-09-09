@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{96A68926-2A75-4514-87C2-817C569726E0}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebNextivaEsta</RootNamespace>
+    <AssemblyName>WebNextivaEsta</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Business">
+      <HintPath>..\..\..\..\Visual Studio 2008\Projects\2- C#  Sample\Business\bin\Debug\Business.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\AjaxCss.css" />
+    <Content Include="css\base.css" />
+    <Content Include="css\base_1.css" />
+    <Content Include="css\boton.css" />
+    <Content Include="css\botones.css" />
+    <Content Include="css\dcmegamenu.css" />
+    <Content Include="css\estilo.css" />
+    <Content Include="css\estilos.css" />
+    <Content Include="css\galeria.css" />
+    <Content Include="css\skins\black.css" />
+    <Content Include="css\skins\blue.css" />
+    <Content Include="css\skins\green.css" />
+    <Content Include="css\skins\grey.css" />
+    <Content Include="css\skins\images\arrow.png" />
+    <Content Include="css\skins\images\arrow_off.png" />
+    <Content Include="css\skins\images\arrow_on.png" />
+    <Content Include="css\skins\images\bg_black.png" />
+    <Content Include="css\skins\images\bg_blue.png" />
+    <Content Include="css\skins\images\bg_green.png" />
+    <Content Include="css\skins\images\bg_grey.png" />
+    <Content Include="css\skins\images\bg_light_blue.png" />
+    <Content Include="css\skins\images\bg_mega_hdr.png" />
+    <Content Include="css\skins\images\bg_mega_hdr_full.png" />
+    <Content Include="css\skins\images\bg_mega_hdr_on.png" />
+    <Content Include="css\skins\images\bg_orange.png" />
+    <Content Include="css\skins\images\bg_red.png" />
+    <Content Include="css\skins\images\bg_sub.png" />
+    <Content Include="css\skins\images\bg_sub_left.png" />
+    <Content Include="css\skins\images\bg_white.png" />
+    <Content Include="css\skins\light_blue.css" />
+    <Content Include="css\skins\orange.css" />
+    <Content Include="css\skins\red.css" />
+    <Content Include="css\skins\white.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\stylesM.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="img\btnAdmin.png" />
+    <Content Include="img\btnEmpresas.png" />
+    <Content Include="img\btnTrabajadores.png" />
+    <Content Include="img\ingresoAdmin.png" />
+    <Content Include="img\ingresoEmpresa.png" />
+    <Content Include="img\ingresoEspecialistas.png" />
+    <Content Include="img\ingresoTrabajadores.png" />
+    <Content Include="img\pdficon_large.gif" />
+    <Content Include="js\jquery-1.3.2.js" />
+    <Content Include="js\jquery-1.4.3.min.js" />
+    <Content Include="js\jquery.dcmegamenu.1.3.3.js" />
+    <Content Include="js\jquery.dcmegamenu.1.3.3.min.js" />
+    <Content Include="js\jquery.hoverIntent.minified.js" />
+    <Content Include="js\thickbox.css" />
+    <Content Include="js\validaciones.js" />
+    <Content Include="Scripts\address.min.js" />
+    <Content Include="Scripts\alertify.js" />
+    <Content Include="Scripts\bootstrap-colorpicker.min.js" />
+    <Content Include="Scripts\bootstrap-datepicker.min.js" />
+    <Content Include="Scripts\bootstrap-editable.min.js" />
+    <Content Include="Scripts\bootstrap-timepicker.min.js" />
+    <Content Include="Scripts\bootstrap-wysiwyg.min.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Chart.min.js" />
+    <Content Include="Scripts\core.min.js" />
+    <Content Include="Scripts\custom.min.js" />
+    <Content Include="Scripts\d3.min.js" />
+    <Content Include="Scripts\dataTables.bootstrap.min.js" />
+    <Content Include="Scripts\daterangepicker.min.js" />
+    <Content Include="Scripts\dropzone.min.js" />
+    <Content Include="Scripts\excanvas.min.js" />
+    <Content Include="Scripts\fullcalendar.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.3.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
+    <Content Include="Scripts\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.1.11.js" />
+    <Content Include="Scripts\jquery.2.1.js" />
+    <Content Include="Scripts\jquery.autosize.min.js" />
+    <Content Include="Scripts\jquery.backstretch.min.js" />
+    <Content Include="Scripts\jquery.chosen.min.js" />
+    <Content Include="Scripts\jquery.cleditor.min.js" />
+    <Content Include="Scripts\jquery.dataTable1.min.js" />
+    <Content Include="Scripts\jquery.dcmegamenu.1.3.3.js" />
+    <Content Include="Scripts\jquery.dcmegamenu.1.3.3.min.js" />
+    <Content Include="Scripts\jquery.easy-pie-chart.min.js" />
+    <Content Include="Scripts\jquery.elfinder.min.js" />
+    <Content Include="Scripts\jquery.flot.min.js" />
+    <Content Include="Scripts\jquery.flot.pie.min.js" />
+    <Content Include="Scripts\jquery.flot.resize.min.js" />
+    <Content Include="Scripts\jquery.flot.stack.min.js" />
+    <Content Include="Scripts\jquery.flot.time.min.js" />
+    <Content Include="Scripts\jquery.gritter.min.js" />
+    <Content Include="Scripts\jquery.hotkeys.min.js" />
+    <Content Include="Scripts\jquery.hoverIntent.minified.js" />
+    <Content Include="Scripts\jquery.icheck.min.js" />
+    <Content Include="Scripts\jquery.inputlimiter.1.3.1.min.js" />
+    <Content Include="Scripts\jquery.knob.modified.min.js" />
+    <Content Include="Scripts\jquery.maskedinput.min.js" />
+    <Content Include="Scripts\jquery.mockjax.min.js" />
+    <Content Include="Scripts\jquery.nestable.min.js" />
+    <Content Include="Scripts\jquery.noty.min.js" />
+    <Content Include="Scripts\jquery.placeholder.min.js" />
+    <Content Include="Scripts\jquery.price_format.2.0.min.js" />
+    <Content Include="Scripts\jquery.raty.min.js" />
+    <Content Include="Scripts\jquery.sparkline.min.js" />
+    <Content Include="Scripts\jquery.ui.touch-punch.min.js" />
+    <Content Include="Scripts\json-serialize.js" />
+    <Content Include="Scripts\json-serialize.min.js" />
+    <Content Include="Scripts\justgage.1.0.1.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\modernizr.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\raphael.min.js" />
+    <Content Include="Scripts\script.js" />
+    <Content Include="Scripts\select2.min.js" />
+    <Content Include="Scripts\shadowbox.js" />
+    <Content Include="Scripts\thickbox.css" />
+    <Content Include="Scripts\typeahead.min.js" />
+    <Content Include="Scripts\typeaheadjs.min.js" />
+    <Content Include="Scripts\validaciones.js" />
+    <Content Include="Scripts\wizard.min.js" />
+    <Content Include="Scripts\xcharts.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="NewFolder1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site1.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49846</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

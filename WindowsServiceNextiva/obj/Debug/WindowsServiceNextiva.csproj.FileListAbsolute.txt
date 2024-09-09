@@ -1,0 +1,32 @@
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\WindowsServiceNextiva\bin\Debug\WindowsServiceNextiva.exe
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\WindowsServiceNextiva\bin\Debug\WindowsServiceNextiva.pdb
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\WindowsServiceNextiva\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.exe
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.pdb
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\WindowsServiceNextiva\bin\Debug\WindowsServiceNextiva.exe.config
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WindowsServiceNextiva\bin\Debug\WindowsServiceNextiva.exe.config
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WindowsServiceNextiva\bin\Debug\WindowsServiceNextiva.exe
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WindowsServiceNextiva\bin\Debug\WindowsServiceNextiva.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.exe
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\2- C#  Sample\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.csprojResolveAssemblyReference.cache
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\WindowsServiceNextiva\bin\Debug\WindowsServiceNextiva.exe.config
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\WindowsServiceNextiva\bin\Debug\WindowsServiceNextiva.exe
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\WindowsServiceNextiva\bin\Debug\WindowsServiceNextiva.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.csprojResolveAssemblyReference.cache
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.exe
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.csproj.GenerateResource.Cache
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.VideoWindow.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.ProjectInstaller.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XX\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.ServiceGateway.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XXNew\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.csprojResolveAssemblyReference.cache
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XXNew\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.ProjectInstaller.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XXNew\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.ServiceGateway.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XXNew\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.VideoWindow.resources
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XXNew\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.csproj.GenerateResource.Cache
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XXNew\WindowsServiceNextiva\bin\Debug\WindowsServiceNextiva.exe.config
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XXNew\WindowsServiceNextiva\bin\Debug\WindowsServiceNextiva.exe
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XXNew\WindowsServiceNextiva\bin\Debug\WindowsServiceNextiva.pdb
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XXNew\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.exe
+C:\Users\administrator.ID-W7-JB-PC\Documents\Visual Studio 2010\Projects\WindowsServiceSGWGate20XXNew\WindowsServiceNextiva\obj\Debug\WindowsServiceNextiva.pdb

@@ -1,0 +1,3113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ServiceSendDataCameraToNextiva">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AlarmSentChannel" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AlarmSentCustCompanyID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlarmSentDateIng" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlarmSentDescription" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AlarmSentEstado" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlarmSentIDE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlarmSentrctTarget" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AlarmSentRuleDescrip" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="AlarmSentRuleID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AlarmSentState" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AlarmSentTargetDirection" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AlarmSentTargetID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AlarmSentTargetSpeed" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AlarmSentTargetType" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AlarmSentventType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceSendDataCameraToNextivaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServiceSendDataCameraToNextivaResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceTrackingErrorSWG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Fecha" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="MachineName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IdSistema" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Resuelto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="NumeroError" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Modulo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceTrackingErrorSWGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServiceTrackingErrorSWGResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceDeviceByCompanyID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerCompanyID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceDeviceByCompanyIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceDeviceByCompanyIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceIngrDevice">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceIDE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceNameDescrip" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TypeDeviceID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerCompanyID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DeviceChannel" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceIDLogon" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceIP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DevicePass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DevicePort" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceDateIng" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DeviceEstado" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="SystemDeviceID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceIngrDeviceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServiceIngrDeviceResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceIngresoCustomerCompany">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyIDE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyDir" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyCelPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyFax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyWebSite" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CiudadID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyDateIng" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerCompanyState" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyShortName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceIngresoCustomerCompanyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServiceIngresoCustomerCompanyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceDeleteCustomerCompanyDataComuni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CusCompanyDataID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceDeleteCustomerCompanyDataComuniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServiceDeleteCustomerCompanyDataComuniResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceUpdateCustomerCompanyDataComuni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CusCompanyDataID" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerCompanyID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataCameraName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CusCompanyDataIDE" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataNextNiveles" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataSiteName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataNameUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataSiteUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataSitePass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataAlarmSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataListenResponse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataListenError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataPathString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataFileName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CusCompanyDataActivo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceUpdateCustomerCompanyDataComuniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServiceUpdateCustomerCompanyDataComuniResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceIngrCustomerCompanyDataComuni">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerCompanyID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataCameraName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CusCompanyDataIDE" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataNextNiveles" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataSiteName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataNameUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataSiteUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataSitePass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataAlarmSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataListenResponse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataListenError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataPathString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataFileName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CusCompanyDataActivo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceIngrCustomerCompanyDataComuniResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServiceIngrCustomerCompanyDataComuniResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyDataComuniByCompanyID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerCompanyID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyDataComuniByCompanyIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCustomerCompanyDataComuniByCompanyIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyDataComuniByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CusCompanyDataID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyDataComuniByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCustomerCompanyDataComuniByIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServicioCustomerCompany_Ingreso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyIDE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyDir" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyCelPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyFax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyWebSite" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CiudadID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyDateIng" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerCompanyState" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyShortName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServicioCustomerCompany_IngresoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServicioCustomerCompany_IngresoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServicioCustomerCompany_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerCompanyID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyIDE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyDir" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyCelPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyFax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyWebSite" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CiudadID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyDateIng" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerCompanyState" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyShortName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServicioCustomerCompany_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServicioCustomerCompany_UpdateResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompany_Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerCompanyID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompany_DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServiceCustomerCompany_DeleteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyByCustomerIP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyByCustomerIPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCustomerCompanyByCustomerIPResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyByCustomerID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyByCustomerIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCustomerCompanyByCustomerIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyAllByCustomer">
+        <s:complexType />
+      </s:element>
+      <s:element name="ServiceCustomerCompanyAllByCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCustomerCompanyAllByCustomerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyAllListDrop">
+        <s:complexType />
+      </s:element>
+      <s:element name="ServiceCustomerCompanyAllListDropResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCustomerCompanyAllListDropResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanySearchByNameCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanySearchByNameCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCustomerCompanySearchByNameCustomerResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyByCiudadID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CiudadID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyByCiudadIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCustomerCompanyByCiudadIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceDeviceAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="ServiceDeviceAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceDeviceAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceDeviceByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeviceID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceDeviceByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceDeviceByIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceAllDeviceByCompanyID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerCompanyID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceAllDeviceByCompanyIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceAllDeviceByCompanyIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceSystemDeviceGetAll">
+        <s:complexType />
+      </s:element>
+      <s:element name="ServiceSystemDeviceGetAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceSystemDeviceGetAllResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceSystemDeviceByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SystemDeviceID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceSystemDeviceByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceSystemDeviceByIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceSystemDevice_Ingreso">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SystemDeviceDescrip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SystemDeviceUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SystemDevicePass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SystemDeviceDateIng" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SystemDeviceEstado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceSystemDevice_IngresoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServiceSystemDevice_IngresoResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceSystemDevice_Update">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SystemDeviceID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="SystemDeviceDescrip" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SystemDeviceUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SystemDevicePass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SystemDeviceDateIng" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="SystemDeviceEstado" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceSystemDevice_UpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServiceSystemDevice_UpdateResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceSystemDevice_Delete">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SystemDeviceID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceSystemDevice_DeleteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServiceSystemDevice_DeleteResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceDeviceByIDE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeviceIDE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceDeviceByIDEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceDeviceByIDEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceGetAllCities">
+        <s:complexType />
+      </s:element>
+      <s:element name="ServiceGetAllCitiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceGetAllCitiesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceGetAllTypeDevice">
+        <s:complexType />
+      </s:element>
+      <s:element name="ServiceGetAllTypeDeviceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceGetAllTypeDeviceResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceGetAllSystemDeviceList">
+        <s:complexType />
+      </s:element>
+      <s:element name="ServiceGetAllSystemDeviceListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceGetAllSystemDeviceListResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyByIDE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CustomerCompanyIDE" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceCustomerCompanyByIDEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ServiceCustomerCompanyByIDEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceIngrCustomerCompanyDataComunications">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CustomerCompanyID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataCameraName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CusCompanyDataIDE" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataNextNiveles" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataSiteName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataNameUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataSiteUser" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataSitePass" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataAlarmSite" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataListenResponse" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataListenError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataPathString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CusCompanyDataFileName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="CusCompanyDataActivo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ServiceIngrCustomerCompanyDataComunicationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ServiceIngrCustomerCompanyDataComunicationsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ServiceSendDataCameraToNextivaSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceSendDataCameraToNextiva" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSendDataCameraToNextivaSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceSendDataCameraToNextivaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceTrackingErrorSWGSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceTrackingErrorSWG" />
+  </wsdl:message>
+  <wsdl:message name="ServiceTrackingErrorSWGSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceTrackingErrorSWGResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByCompanyIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceDeviceByCompanyID" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByCompanyIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceDeviceByCompanyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrDeviceSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceIngrDevice" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrDeviceSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceIngrDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngresoCustomerCompanySoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceIngresoCustomerCompany" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngresoCustomerCompanySoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceIngresoCustomerCompanyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeleteCustomerCompanyDataComuniSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceDeleteCustomerCompanyDataComuni" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeleteCustomerCompanyDataComuniSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceDeleteCustomerCompanyDataComuniResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceUpdateCustomerCompanyDataComuniSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceUpdateCustomerCompanyDataComuni" />
+  </wsdl:message>
+  <wsdl:message name="ServiceUpdateCustomerCompanyDataComuniSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceUpdateCustomerCompanyDataComuniResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrCustomerCompanyDataComuniSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceIngrCustomerCompanyDataComuni" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrCustomerCompanyDataComuniSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceIngrCustomerCompanyDataComuniResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyDataComuniByCompanyIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyDataComuniByCompanyID" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyDataComuniByCompanyIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyDataComuniByCompanyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyDataComuniByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyDataComuniByID" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyDataComuniByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyDataComuniByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCustomerCompany_IngresoSoapIn">
+    <wsdl:part name="parameters" element="tns:ServicioCustomerCompany_Ingreso" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCustomerCompany_IngresoSoapOut">
+    <wsdl:part name="parameters" element="tns:ServicioCustomerCompany_IngresoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCustomerCompany_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:ServicioCustomerCompany_Update" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCustomerCompany_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:ServicioCustomerCompany_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompany_DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompany_Delete" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompany_DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompany_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCustomerIPSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyByCustomerIP" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCustomerIPSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyByCustomerIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCustomerIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyByCustomerID" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCustomerIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyByCustomerIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyAllByCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyAllByCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyAllByCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyAllByCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyAllListDropSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyAllListDrop" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyAllListDropSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyAllListDropResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanySearchByNameCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanySearchByNameCustomer" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanySearchByNameCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanySearchByNameCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCiudadIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyByCiudadID" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCiudadIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyByCiudadIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceAllSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceDeviceAll" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceAllSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceDeviceAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceDeviceByID" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceDeviceByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceAllDeviceByCompanyIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceAllDeviceByCompanyID" />
+  </wsdl:message>
+  <wsdl:message name="ServiceAllDeviceByCompanyIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceAllDeviceByCompanyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDeviceGetAllSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceSystemDeviceGetAll" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDeviceGetAllSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceSystemDeviceGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDeviceByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceSystemDeviceByID" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDeviceByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceSystemDeviceByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_IngresoSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceSystemDevice_Ingreso" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_IngresoSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceSystemDevice_IngresoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_UpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceSystemDevice_Update" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_UpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceSystemDevice_UpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_DeleteSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceSystemDevice_Delete" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_DeleteSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceSystemDevice_DeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByIDESoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceDeviceByIDE" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByIDESoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceDeviceByIDEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceGetAllCitiesSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceGetAllCities" />
+  </wsdl:message>
+  <wsdl:message name="ServiceGetAllCitiesSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceGetAllCitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceGetAllTypeDeviceSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceGetAllTypeDevice" />
+  </wsdl:message>
+  <wsdl:message name="ServiceGetAllTypeDeviceSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceGetAllTypeDeviceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceGetAllSystemDeviceListSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceGetAllSystemDeviceList" />
+  </wsdl:message>
+  <wsdl:message name="ServiceGetAllSystemDeviceListSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceGetAllSystemDeviceListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByIDESoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyByIDE" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByIDESoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceCustomerCompanyByIDEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrCustomerCompanyDataComunicationsSoapIn">
+    <wsdl:part name="parameters" element="tns:ServiceIngrCustomerCompanyDataComunications" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrCustomerCompanyDataComunicationsSoapOut">
+    <wsdl:part name="parameters" element="tns:ServiceIngrCustomerCompanyDataComunicationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSendDataCameraToNextivaHttpGetIn">
+    <wsdl:part name="AlarmSentChannel" type="s:string" />
+    <wsdl:part name="AlarmSentCustCompanyID" type="s:string" />
+    <wsdl:part name="AlarmSentDateIng" type="s:string" />
+    <wsdl:part name="AlarmSentDescription" type="s:string" />
+    <wsdl:part name="AlarmSentEstado" type="s:string" />
+    <wsdl:part name="AlarmSentIDE" type="s:string" />
+    <wsdl:part name="AlarmSentrctTarget" type="s:string" />
+    <wsdl:part name="AlarmSentRuleDescrip" type="s:string" />
+    <wsdl:part name="AlarmSentRuleID" type="s:string" />
+    <wsdl:part name="AlarmSentState" type="s:string" />
+    <wsdl:part name="AlarmSentTargetDirection" type="s:string" />
+    <wsdl:part name="AlarmSentTargetID" type="s:string" />
+    <wsdl:part name="AlarmSentTargetSpeed" type="s:string" />
+    <wsdl:part name="AlarmSentTargetType" type="s:string" />
+    <wsdl:part name="AlarmSentventType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSendDataCameraToNextivaHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceTrackingErrorSWGHttpGetIn">
+    <wsdl:part name="Fecha" type="s:string" />
+    <wsdl:part name="MachineName" type="s:string" />
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="IdSistema" type="s:string" />
+    <wsdl:part name="Mensaje" type="s:string" />
+    <wsdl:part name="Resuelto" type="s:string" />
+    <wsdl:part name="NumeroError" type="s:string" />
+    <wsdl:part name="Modulo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceTrackingErrorSWGHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByCompanyIDHttpGetIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByCompanyIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrDeviceHttpGetIn">
+    <wsdl:part name="DeviceIDE" type="s:string" />
+    <wsdl:part name="DeviceNameDescrip" type="s:string" />
+    <wsdl:part name="TypeDeviceID" type="s:string" />
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+    <wsdl:part name="DeviceChannel" type="s:string" />
+    <wsdl:part name="DeviceIDLogon" type="s:string" />
+    <wsdl:part name="DeviceIP" type="s:string" />
+    <wsdl:part name="DeviceUser" type="s:string" />
+    <wsdl:part name="DevicePass" type="s:string" />
+    <wsdl:part name="DevicePort" type="s:string" />
+    <wsdl:part name="DeviceDateIng" type="s:string" />
+    <wsdl:part name="DeviceEstado" type="s:string" />
+    <wsdl:part name="SystemDeviceID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrDeviceHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngresoCustomerCompanyHttpGetIn">
+    <wsdl:part name="CustomerCompanyIDE" type="s:string" />
+    <wsdl:part name="CustomerCompanyName" type="s:string" />
+    <wsdl:part name="CustomerCompanyDir" type="s:string" />
+    <wsdl:part name="CustomerCompanyPhone" type="s:string" />
+    <wsdl:part name="CustomerCompanyCelPhone" type="s:string" />
+    <wsdl:part name="CustomerCompanyEmail" type="s:string" />
+    <wsdl:part name="CustomerCompanyFax" type="s:string" />
+    <wsdl:part name="CustomerCompanyWebSite" type="s:string" />
+    <wsdl:part name="CiudadID" type="s:string" />
+    <wsdl:part name="CustomerCompanyDateIng" type="s:string" />
+    <wsdl:part name="CustomerCompanyState" type="s:string" />
+    <wsdl:part name="CustomerCompanyShortName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngresoCustomerCompanyHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeleteCustomerCompanyDataComuniHttpGetIn">
+    <wsdl:part name="CusCompanyDataID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeleteCustomerCompanyDataComuniHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceUpdateCustomerCompanyDataComuniHttpGetIn">
+    <wsdl:part name="CusCompanyDataID" type="s:string" />
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+    <wsdl:part name="CusCompanyDataCameraName" type="s:string" />
+    <wsdl:part name="CusCompanyDataIDE" type="s:string" />
+    <wsdl:part name="CusCompanyDataNextNiveles" type="s:string" />
+    <wsdl:part name="CusCompanyDataSiteName" type="s:string" />
+    <wsdl:part name="CusCompanyDataNameUrl" type="s:string" />
+    <wsdl:part name="CusCompanyDataSiteUser" type="s:string" />
+    <wsdl:part name="CusCompanyDataSitePass" type="s:string" />
+    <wsdl:part name="CusCompanyDataAlarmSite" type="s:string" />
+    <wsdl:part name="CusCompanyDataListenResponse" type="s:string" />
+    <wsdl:part name="CusCompanyDataListenError" type="s:string" />
+    <wsdl:part name="CusCompanyDataPathString" type="s:string" />
+    <wsdl:part name="CusCompanyDataFileName" type="s:string" />
+    <wsdl:part name="CusCompanyDataActivo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceUpdateCustomerCompanyDataComuniHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrCustomerCompanyDataComuniHttpGetIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+    <wsdl:part name="CusCompanyDataCameraName" type="s:string" />
+    <wsdl:part name="CusCompanyDataIDE" type="s:string" />
+    <wsdl:part name="CusCompanyDataNextNiveles" type="s:string" />
+    <wsdl:part name="CusCompanyDataSiteName" type="s:string" />
+    <wsdl:part name="CusCompanyDataNameUrl" type="s:string" />
+    <wsdl:part name="CusCompanyDataSiteUser" type="s:string" />
+    <wsdl:part name="CusCompanyDataSitePass" type="s:string" />
+    <wsdl:part name="CusCompanyDataAlarmSite" type="s:string" />
+    <wsdl:part name="CusCompanyDataListenResponse" type="s:string" />
+    <wsdl:part name="CusCompanyDataListenError" type="s:string" />
+    <wsdl:part name="CusCompanyDataPathString" type="s:string" />
+    <wsdl:part name="CusCompanyDataFileName" type="s:string" />
+    <wsdl:part name="CusCompanyDataActivo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrCustomerCompanyDataComuniHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyDataComuniByCompanyIDHttpGetIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyDataComuniByCompanyIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyDataComuniByIDHttpGetIn">
+    <wsdl:part name="CusCompanyDataID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyDataComuniByIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCustomerCompany_IngresoHttpGetIn">
+    <wsdl:part name="CustomerCompanyIDE" type="s:string" />
+    <wsdl:part name="CustomerCompanyName" type="s:string" />
+    <wsdl:part name="CustomerCompanyDir" type="s:string" />
+    <wsdl:part name="CustomerCompanyPhone" type="s:string" />
+    <wsdl:part name="CustomerCompanyCelPhone" type="s:string" />
+    <wsdl:part name="CustomerCompanyEmail" type="s:string" />
+    <wsdl:part name="CustomerCompanyFax" type="s:string" />
+    <wsdl:part name="CustomerCompanyWebSite" type="s:string" />
+    <wsdl:part name="CiudadID" type="s:string" />
+    <wsdl:part name="CustomerCompanyDateIng" type="s:string" />
+    <wsdl:part name="CustomerCompanyState" type="s:string" />
+    <wsdl:part name="CustomerCompanyShortName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCustomerCompany_IngresoHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCustomerCompany_UpdateHttpGetIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+    <wsdl:part name="CustomerCompanyIDE" type="s:string" />
+    <wsdl:part name="CustomerCompanyName" type="s:string" />
+    <wsdl:part name="CustomerCompanyDir" type="s:string" />
+    <wsdl:part name="CustomerCompanyPhone" type="s:string" />
+    <wsdl:part name="CustomerCompanyCelPhone" type="s:string" />
+    <wsdl:part name="CustomerCompanyEmail" type="s:string" />
+    <wsdl:part name="CustomerCompanyFax" type="s:string" />
+    <wsdl:part name="CustomerCompanyWebSite" type="s:string" />
+    <wsdl:part name="CiudadID" type="s:string" />
+    <wsdl:part name="CustomerCompanyDateIng" type="s:string" />
+    <wsdl:part name="CustomerCompanyState" type="s:string" />
+    <wsdl:part name="CustomerCompanyShortName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCustomerCompany_UpdateHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompany_DeleteHttpGetIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompany_DeleteHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCustomerIPHttpGetIn">
+    <wsdl:part name="IP" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCustomerIPHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCustomerIDHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCustomerIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyAllByCustomerHttpGetIn" />
+  <wsdl:message name="ServiceCustomerCompanyAllByCustomerHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyAllListDropHttpGetIn" />
+  <wsdl:message name="ServiceCustomerCompanyAllListDropHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanySearchByNameCustomerHttpGetIn">
+    <wsdl:part name="str_name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanySearchByNameCustomerHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCiudadIDHttpGetIn">
+    <wsdl:part name="CiudadID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCiudadIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceAllHttpGetIn" />
+  <wsdl:message name="ServiceDeviceAllHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByIDHttpGetIn">
+    <wsdl:part name="DeviceID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceAllDeviceByCompanyIDHttpGetIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceAllDeviceByCompanyIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDeviceGetAllHttpGetIn" />
+  <wsdl:message name="ServiceSystemDeviceGetAllHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDeviceByIDHttpGetIn">
+    <wsdl:part name="SystemDeviceID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDeviceByIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_IngresoHttpGetIn">
+    <wsdl:part name="SystemDeviceDescrip" type="s:string" />
+    <wsdl:part name="SystemDeviceUser" type="s:string" />
+    <wsdl:part name="SystemDevicePass" type="s:string" />
+    <wsdl:part name="SystemDeviceDateIng" type="s:string" />
+    <wsdl:part name="SystemDeviceEstado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_IngresoHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_UpdateHttpGetIn">
+    <wsdl:part name="SystemDeviceID" type="s:string" />
+    <wsdl:part name="SystemDeviceDescrip" type="s:string" />
+    <wsdl:part name="SystemDeviceUser" type="s:string" />
+    <wsdl:part name="SystemDevicePass" type="s:string" />
+    <wsdl:part name="SystemDeviceDateIng" type="s:string" />
+    <wsdl:part name="SystemDeviceEstado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_UpdateHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_DeleteHttpGetIn">
+    <wsdl:part name="SystemDeviceID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_DeleteHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByIDEHttpGetIn">
+    <wsdl:part name="DeviceIDE" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByIDEHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceGetAllCitiesHttpGetIn" />
+  <wsdl:message name="ServiceGetAllCitiesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceGetAllTypeDeviceHttpGetIn" />
+  <wsdl:message name="ServiceGetAllTypeDeviceHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceGetAllSystemDeviceListHttpGetIn" />
+  <wsdl:message name="ServiceGetAllSystemDeviceListHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByIDEHttpGetIn">
+    <wsdl:part name="CustomerCompanyIDE" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByIDEHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrCustomerCompanyDataComunicationsHttpGetIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+    <wsdl:part name="CusCompanyDataCameraName" type="s:string" />
+    <wsdl:part name="CusCompanyDataIDE" type="s:string" />
+    <wsdl:part name="CusCompanyDataNextNiveles" type="s:string" />
+    <wsdl:part name="CusCompanyDataSiteName" type="s:string" />
+    <wsdl:part name="CusCompanyDataNameUrl" type="s:string" />
+    <wsdl:part name="CusCompanyDataSiteUser" type="s:string" />
+    <wsdl:part name="CusCompanyDataSitePass" type="s:string" />
+    <wsdl:part name="CusCompanyDataAlarmSite" type="s:string" />
+    <wsdl:part name="CusCompanyDataListenResponse" type="s:string" />
+    <wsdl:part name="CusCompanyDataListenError" type="s:string" />
+    <wsdl:part name="CusCompanyDataPathString" type="s:string" />
+    <wsdl:part name="CusCompanyDataFileName" type="s:string" />
+    <wsdl:part name="CusCompanyDataActivo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrCustomerCompanyDataComunicationsHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSendDataCameraToNextivaHttpPostIn">
+    <wsdl:part name="AlarmSentChannel" type="s:string" />
+    <wsdl:part name="AlarmSentCustCompanyID" type="s:string" />
+    <wsdl:part name="AlarmSentDateIng" type="s:string" />
+    <wsdl:part name="AlarmSentDescription" type="s:string" />
+    <wsdl:part name="AlarmSentEstado" type="s:string" />
+    <wsdl:part name="AlarmSentIDE" type="s:string" />
+    <wsdl:part name="AlarmSentrctTarget" type="s:string" />
+    <wsdl:part name="AlarmSentRuleDescrip" type="s:string" />
+    <wsdl:part name="AlarmSentRuleID" type="s:string" />
+    <wsdl:part name="AlarmSentState" type="s:string" />
+    <wsdl:part name="AlarmSentTargetDirection" type="s:string" />
+    <wsdl:part name="AlarmSentTargetID" type="s:string" />
+    <wsdl:part name="AlarmSentTargetSpeed" type="s:string" />
+    <wsdl:part name="AlarmSentTargetType" type="s:string" />
+    <wsdl:part name="AlarmSentventType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSendDataCameraToNextivaHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceTrackingErrorSWGHttpPostIn">
+    <wsdl:part name="Fecha" type="s:string" />
+    <wsdl:part name="MachineName" type="s:string" />
+    <wsdl:part name="UserName" type="s:string" />
+    <wsdl:part name="IdSistema" type="s:string" />
+    <wsdl:part name="Mensaje" type="s:string" />
+    <wsdl:part name="Resuelto" type="s:string" />
+    <wsdl:part name="NumeroError" type="s:string" />
+    <wsdl:part name="Modulo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceTrackingErrorSWGHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByCompanyIDHttpPostIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByCompanyIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrDeviceHttpPostIn">
+    <wsdl:part name="DeviceIDE" type="s:string" />
+    <wsdl:part name="DeviceNameDescrip" type="s:string" />
+    <wsdl:part name="TypeDeviceID" type="s:string" />
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+    <wsdl:part name="DeviceChannel" type="s:string" />
+    <wsdl:part name="DeviceIDLogon" type="s:string" />
+    <wsdl:part name="DeviceIP" type="s:string" />
+    <wsdl:part name="DeviceUser" type="s:string" />
+    <wsdl:part name="DevicePass" type="s:string" />
+    <wsdl:part name="DevicePort" type="s:string" />
+    <wsdl:part name="DeviceDateIng" type="s:string" />
+    <wsdl:part name="DeviceEstado" type="s:string" />
+    <wsdl:part name="SystemDeviceID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrDeviceHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngresoCustomerCompanyHttpPostIn">
+    <wsdl:part name="CustomerCompanyIDE" type="s:string" />
+    <wsdl:part name="CustomerCompanyName" type="s:string" />
+    <wsdl:part name="CustomerCompanyDir" type="s:string" />
+    <wsdl:part name="CustomerCompanyPhone" type="s:string" />
+    <wsdl:part name="CustomerCompanyCelPhone" type="s:string" />
+    <wsdl:part name="CustomerCompanyEmail" type="s:string" />
+    <wsdl:part name="CustomerCompanyFax" type="s:string" />
+    <wsdl:part name="CustomerCompanyWebSite" type="s:string" />
+    <wsdl:part name="CiudadID" type="s:string" />
+    <wsdl:part name="CustomerCompanyDateIng" type="s:string" />
+    <wsdl:part name="CustomerCompanyState" type="s:string" />
+    <wsdl:part name="CustomerCompanyShortName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngresoCustomerCompanyHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeleteCustomerCompanyDataComuniHttpPostIn">
+    <wsdl:part name="CusCompanyDataID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeleteCustomerCompanyDataComuniHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceUpdateCustomerCompanyDataComuniHttpPostIn">
+    <wsdl:part name="CusCompanyDataID" type="s:string" />
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+    <wsdl:part name="CusCompanyDataCameraName" type="s:string" />
+    <wsdl:part name="CusCompanyDataIDE" type="s:string" />
+    <wsdl:part name="CusCompanyDataNextNiveles" type="s:string" />
+    <wsdl:part name="CusCompanyDataSiteName" type="s:string" />
+    <wsdl:part name="CusCompanyDataNameUrl" type="s:string" />
+    <wsdl:part name="CusCompanyDataSiteUser" type="s:string" />
+    <wsdl:part name="CusCompanyDataSitePass" type="s:string" />
+    <wsdl:part name="CusCompanyDataAlarmSite" type="s:string" />
+    <wsdl:part name="CusCompanyDataListenResponse" type="s:string" />
+    <wsdl:part name="CusCompanyDataListenError" type="s:string" />
+    <wsdl:part name="CusCompanyDataPathString" type="s:string" />
+    <wsdl:part name="CusCompanyDataFileName" type="s:string" />
+    <wsdl:part name="CusCompanyDataActivo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceUpdateCustomerCompanyDataComuniHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrCustomerCompanyDataComuniHttpPostIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+    <wsdl:part name="CusCompanyDataCameraName" type="s:string" />
+    <wsdl:part name="CusCompanyDataIDE" type="s:string" />
+    <wsdl:part name="CusCompanyDataNextNiveles" type="s:string" />
+    <wsdl:part name="CusCompanyDataSiteName" type="s:string" />
+    <wsdl:part name="CusCompanyDataNameUrl" type="s:string" />
+    <wsdl:part name="CusCompanyDataSiteUser" type="s:string" />
+    <wsdl:part name="CusCompanyDataSitePass" type="s:string" />
+    <wsdl:part name="CusCompanyDataAlarmSite" type="s:string" />
+    <wsdl:part name="CusCompanyDataListenResponse" type="s:string" />
+    <wsdl:part name="CusCompanyDataListenError" type="s:string" />
+    <wsdl:part name="CusCompanyDataPathString" type="s:string" />
+    <wsdl:part name="CusCompanyDataFileName" type="s:string" />
+    <wsdl:part name="CusCompanyDataActivo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrCustomerCompanyDataComuniHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyDataComuniByCompanyIDHttpPostIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyDataComuniByCompanyIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyDataComuniByIDHttpPostIn">
+    <wsdl:part name="CusCompanyDataID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyDataComuniByIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCustomerCompany_IngresoHttpPostIn">
+    <wsdl:part name="CustomerCompanyIDE" type="s:string" />
+    <wsdl:part name="CustomerCompanyName" type="s:string" />
+    <wsdl:part name="CustomerCompanyDir" type="s:string" />
+    <wsdl:part name="CustomerCompanyPhone" type="s:string" />
+    <wsdl:part name="CustomerCompanyCelPhone" type="s:string" />
+    <wsdl:part name="CustomerCompanyEmail" type="s:string" />
+    <wsdl:part name="CustomerCompanyFax" type="s:string" />
+    <wsdl:part name="CustomerCompanyWebSite" type="s:string" />
+    <wsdl:part name="CiudadID" type="s:string" />
+    <wsdl:part name="CustomerCompanyDateIng" type="s:string" />
+    <wsdl:part name="CustomerCompanyState" type="s:string" />
+    <wsdl:part name="CustomerCompanyShortName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCustomerCompany_IngresoHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCustomerCompany_UpdateHttpPostIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+    <wsdl:part name="CustomerCompanyIDE" type="s:string" />
+    <wsdl:part name="CustomerCompanyName" type="s:string" />
+    <wsdl:part name="CustomerCompanyDir" type="s:string" />
+    <wsdl:part name="CustomerCompanyPhone" type="s:string" />
+    <wsdl:part name="CustomerCompanyCelPhone" type="s:string" />
+    <wsdl:part name="CustomerCompanyEmail" type="s:string" />
+    <wsdl:part name="CustomerCompanyFax" type="s:string" />
+    <wsdl:part name="CustomerCompanyWebSite" type="s:string" />
+    <wsdl:part name="CiudadID" type="s:string" />
+    <wsdl:part name="CustomerCompanyDateIng" type="s:string" />
+    <wsdl:part name="CustomerCompanyState" type="s:string" />
+    <wsdl:part name="CustomerCompanyShortName" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServicioCustomerCompany_UpdateHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompany_DeleteHttpPostIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompany_DeleteHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCustomerIPHttpPostIn">
+    <wsdl:part name="IP" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCustomerIPHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCustomerIDHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCustomerIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyAllByCustomerHttpPostIn" />
+  <wsdl:message name="ServiceCustomerCompanyAllByCustomerHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyAllListDropHttpPostIn" />
+  <wsdl:message name="ServiceCustomerCompanyAllListDropHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanySearchByNameCustomerHttpPostIn">
+    <wsdl:part name="str_name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanySearchByNameCustomerHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCiudadIDHttpPostIn">
+    <wsdl:part name="CiudadID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByCiudadIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceAllHttpPostIn" />
+  <wsdl:message name="ServiceDeviceAllHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByIDHttpPostIn">
+    <wsdl:part name="DeviceID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceAllDeviceByCompanyIDHttpPostIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceAllDeviceByCompanyIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDeviceGetAllHttpPostIn" />
+  <wsdl:message name="ServiceSystemDeviceGetAllHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDeviceByIDHttpPostIn">
+    <wsdl:part name="SystemDeviceID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDeviceByIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_IngresoHttpPostIn">
+    <wsdl:part name="SystemDeviceDescrip" type="s:string" />
+    <wsdl:part name="SystemDeviceUser" type="s:string" />
+    <wsdl:part name="SystemDevicePass" type="s:string" />
+    <wsdl:part name="SystemDeviceDateIng" type="s:string" />
+    <wsdl:part name="SystemDeviceEstado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_IngresoHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_UpdateHttpPostIn">
+    <wsdl:part name="SystemDeviceID" type="s:string" />
+    <wsdl:part name="SystemDeviceDescrip" type="s:string" />
+    <wsdl:part name="SystemDeviceUser" type="s:string" />
+    <wsdl:part name="SystemDevicePass" type="s:string" />
+    <wsdl:part name="SystemDeviceDateIng" type="s:string" />
+    <wsdl:part name="SystemDeviceEstado" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_UpdateHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_DeleteHttpPostIn">
+    <wsdl:part name="SystemDeviceID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceSystemDevice_DeleteHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByIDEHttpPostIn">
+    <wsdl:part name="DeviceIDE" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceDeviceByIDEHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceGetAllCitiesHttpPostIn" />
+  <wsdl:message name="ServiceGetAllCitiesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceGetAllTypeDeviceHttpPostIn" />
+  <wsdl:message name="ServiceGetAllTypeDeviceHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceGetAllSystemDeviceListHttpPostIn" />
+  <wsdl:message name="ServiceGetAllSystemDeviceListHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByIDEHttpPostIn">
+    <wsdl:part name="CustomerCompanyIDE" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceCustomerCompanyByIDEHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrCustomerCompanyDataComunicationsHttpPostIn">
+    <wsdl:part name="CustomerCompanyID" type="s:string" />
+    <wsdl:part name="CusCompanyDataCameraName" type="s:string" />
+    <wsdl:part name="CusCompanyDataIDE" type="s:string" />
+    <wsdl:part name="CusCompanyDataNextNiveles" type="s:string" />
+    <wsdl:part name="CusCompanyDataSiteName" type="s:string" />
+    <wsdl:part name="CusCompanyDataNameUrl" type="s:string" />
+    <wsdl:part name="CusCompanyDataSiteUser" type="s:string" />
+    <wsdl:part name="CusCompanyDataSitePass" type="s:string" />
+    <wsdl:part name="CusCompanyDataAlarmSite" type="s:string" />
+    <wsdl:part name="CusCompanyDataListenResponse" type="s:string" />
+    <wsdl:part name="CusCompanyDataListenError" type="s:string" />
+    <wsdl:part name="CusCompanyDataPathString" type="s:string" />
+    <wsdl:part name="CusCompanyDataFileName" type="s:string" />
+    <wsdl:part name="CusCompanyDataActivo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ServiceIngrCustomerCompanyDataComunicationsHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="ServiceSendDataCameraToNextiva">
+      <wsdl:input message="tns:ServiceSendDataCameraToNextivaSoapIn" />
+      <wsdl:output message="tns:ServiceSendDataCameraToNextivaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceTrackingErrorSWG">
+      <wsdl:input message="tns:ServiceTrackingErrorSWGSoapIn" />
+      <wsdl:output message="tns:ServiceTrackingErrorSWGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByCompanyID">
+      <wsdl:input message="tns:ServiceDeviceByCompanyIDSoapIn" />
+      <wsdl:output message="tns:ServiceDeviceByCompanyIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrDevice">
+      <wsdl:input message="tns:ServiceIngrDeviceSoapIn" />
+      <wsdl:output message="tns:ServiceIngrDeviceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngresoCustomerCompany">
+      <wsdl:input message="tns:ServiceIngresoCustomerCompanySoapIn" />
+      <wsdl:output message="tns:ServiceIngresoCustomerCompanySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeleteCustomerCompanyDataComuni">
+      <wsdl:input message="tns:ServiceDeleteCustomerCompanyDataComuniSoapIn" />
+      <wsdl:output message="tns:ServiceDeleteCustomerCompanyDataComuniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceUpdateCustomerCompanyDataComuni">
+      <wsdl:input message="tns:ServiceUpdateCustomerCompanyDataComuniSoapIn" />
+      <wsdl:output message="tns:ServiceUpdateCustomerCompanyDataComuniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComuni">
+      <wsdl:input message="tns:ServiceIngrCustomerCompanyDataComuniSoapIn" />
+      <wsdl:output message="tns:ServiceIngrCustomerCompanyDataComuniSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByCompanyID">
+      <wsdl:input message="tns:ServiceCustomerCompanyDataComuniByCompanyIDSoapIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyDataComuniByCompanyIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByID">
+      <wsdl:input message="tns:ServiceCustomerCompanyDataComuniByIDSoapIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyDataComuniByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Ingreso">
+      <wsdl:input message="tns:ServicioCustomerCompany_IngresoSoapIn" />
+      <wsdl:output message="tns:ServicioCustomerCompany_IngresoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Update">
+      <wsdl:input message="tns:ServicioCustomerCompany_UpdateSoapIn" />
+      <wsdl:output message="tns:ServicioCustomerCompany_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompany_Delete">
+      <wsdl:input message="tns:ServiceCustomerCompany_DeleteSoapIn" />
+      <wsdl:output message="tns:ServiceCustomerCompany_DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerIP">
+      <wsdl:input message="tns:ServiceCustomerCompanyByCustomerIPSoapIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyByCustomerIPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerID">
+      <wsdl:input message="tns:ServiceCustomerCompanyByCustomerIDSoapIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyByCustomerIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllByCustomer">
+      <wsdl:input message="tns:ServiceCustomerCompanyAllByCustomerSoapIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyAllByCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllListDrop">
+      <wsdl:input message="tns:ServiceCustomerCompanyAllListDropSoapIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyAllListDropSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanySearchByNameCustomer">
+      <wsdl:input message="tns:ServiceCustomerCompanySearchByNameCustomerSoapIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanySearchByNameCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCiudadID">
+      <wsdl:input message="tns:ServiceCustomerCompanyByCiudadIDSoapIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyByCiudadIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceAll">
+      <wsdl:input message="tns:ServiceDeviceAllSoapIn" />
+      <wsdl:output message="tns:ServiceDeviceAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByID">
+      <wsdl:input message="tns:ServiceDeviceByIDSoapIn" />
+      <wsdl:output message="tns:ServiceDeviceByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceAllDeviceByCompanyID">
+      <wsdl:input message="tns:ServiceAllDeviceByCompanyIDSoapIn" />
+      <wsdl:output message="tns:ServiceAllDeviceByCompanyIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceGetAll">
+      <wsdl:input message="tns:ServiceSystemDeviceGetAllSoapIn" />
+      <wsdl:output message="tns:ServiceSystemDeviceGetAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceByID">
+      <wsdl:input message="tns:ServiceSystemDeviceByIDSoapIn" />
+      <wsdl:output message="tns:ServiceSystemDeviceByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Ingreso">
+      <wsdl:input message="tns:ServiceSystemDevice_IngresoSoapIn" />
+      <wsdl:output message="tns:ServiceSystemDevice_IngresoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Update">
+      <wsdl:input message="tns:ServiceSystemDevice_UpdateSoapIn" />
+      <wsdl:output message="tns:ServiceSystemDevice_UpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Delete">
+      <wsdl:input message="tns:ServiceSystemDevice_DeleteSoapIn" />
+      <wsdl:output message="tns:ServiceSystemDevice_DeleteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByIDE">
+      <wsdl:input message="tns:ServiceDeviceByIDESoapIn" />
+      <wsdl:output message="tns:ServiceDeviceByIDESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllCities">
+      <wsdl:input message="tns:ServiceGetAllCitiesSoapIn" />
+      <wsdl:output message="tns:ServiceGetAllCitiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllTypeDevice">
+      <wsdl:input message="tns:ServiceGetAllTypeDeviceSoapIn" />
+      <wsdl:output message="tns:ServiceGetAllTypeDeviceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllSystemDeviceList">
+      <wsdl:input message="tns:ServiceGetAllSystemDeviceListSoapIn" />
+      <wsdl:output message="tns:ServiceGetAllSystemDeviceListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByIDE">
+      <wsdl:input message="tns:ServiceCustomerCompanyByIDESoapIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyByIDESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComunications">
+      <wsdl:input message="tns:ServiceIngrCustomerCompanyDataComunicationsSoapIn" />
+      <wsdl:output message="tns:ServiceIngrCustomerCompanyDataComunicationsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpGet">
+    <wsdl:operation name="ServiceSendDataCameraToNextiva">
+      <wsdl:input message="tns:ServiceSendDataCameraToNextivaHttpGetIn" />
+      <wsdl:output message="tns:ServiceSendDataCameraToNextivaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceTrackingErrorSWG">
+      <wsdl:input message="tns:ServiceTrackingErrorSWGHttpGetIn" />
+      <wsdl:output message="tns:ServiceTrackingErrorSWGHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByCompanyID">
+      <wsdl:input message="tns:ServiceDeviceByCompanyIDHttpGetIn" />
+      <wsdl:output message="tns:ServiceDeviceByCompanyIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrDevice">
+      <wsdl:input message="tns:ServiceIngrDeviceHttpGetIn" />
+      <wsdl:output message="tns:ServiceIngrDeviceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngresoCustomerCompany">
+      <wsdl:input message="tns:ServiceIngresoCustomerCompanyHttpGetIn" />
+      <wsdl:output message="tns:ServiceIngresoCustomerCompanyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeleteCustomerCompanyDataComuni">
+      <wsdl:input message="tns:ServiceDeleteCustomerCompanyDataComuniHttpGetIn" />
+      <wsdl:output message="tns:ServiceDeleteCustomerCompanyDataComuniHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceUpdateCustomerCompanyDataComuni">
+      <wsdl:input message="tns:ServiceUpdateCustomerCompanyDataComuniHttpGetIn" />
+      <wsdl:output message="tns:ServiceUpdateCustomerCompanyDataComuniHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComuni">
+      <wsdl:input message="tns:ServiceIngrCustomerCompanyDataComuniHttpGetIn" />
+      <wsdl:output message="tns:ServiceIngrCustomerCompanyDataComuniHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByCompanyID">
+      <wsdl:input message="tns:ServiceCustomerCompanyDataComuniByCompanyIDHttpGetIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyDataComuniByCompanyIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByID">
+      <wsdl:input message="tns:ServiceCustomerCompanyDataComuniByIDHttpGetIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyDataComuniByIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Ingreso">
+      <wsdl:input message="tns:ServicioCustomerCompany_IngresoHttpGetIn" />
+      <wsdl:output message="tns:ServicioCustomerCompany_IngresoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Update">
+      <wsdl:input message="tns:ServicioCustomerCompany_UpdateHttpGetIn" />
+      <wsdl:output message="tns:ServicioCustomerCompany_UpdateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompany_Delete">
+      <wsdl:input message="tns:ServiceCustomerCompany_DeleteHttpGetIn" />
+      <wsdl:output message="tns:ServiceCustomerCompany_DeleteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerIP">
+      <wsdl:input message="tns:ServiceCustomerCompanyByCustomerIPHttpGetIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyByCustomerIPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerID">
+      <wsdl:input message="tns:ServiceCustomerCompanyByCustomerIDHttpGetIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyByCustomerIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllByCustomer">
+      <wsdl:input message="tns:ServiceCustomerCompanyAllByCustomerHttpGetIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyAllByCustomerHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllListDrop">
+      <wsdl:input message="tns:ServiceCustomerCompanyAllListDropHttpGetIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyAllListDropHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanySearchByNameCustomer">
+      <wsdl:input message="tns:ServiceCustomerCompanySearchByNameCustomerHttpGetIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanySearchByNameCustomerHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCiudadID">
+      <wsdl:input message="tns:ServiceCustomerCompanyByCiudadIDHttpGetIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyByCiudadIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceAll">
+      <wsdl:input message="tns:ServiceDeviceAllHttpGetIn" />
+      <wsdl:output message="tns:ServiceDeviceAllHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByID">
+      <wsdl:input message="tns:ServiceDeviceByIDHttpGetIn" />
+      <wsdl:output message="tns:ServiceDeviceByIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceAllDeviceByCompanyID">
+      <wsdl:input message="tns:ServiceAllDeviceByCompanyIDHttpGetIn" />
+      <wsdl:output message="tns:ServiceAllDeviceByCompanyIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceGetAll">
+      <wsdl:input message="tns:ServiceSystemDeviceGetAllHttpGetIn" />
+      <wsdl:output message="tns:ServiceSystemDeviceGetAllHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceByID">
+      <wsdl:input message="tns:ServiceSystemDeviceByIDHttpGetIn" />
+      <wsdl:output message="tns:ServiceSystemDeviceByIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Ingreso">
+      <wsdl:input message="tns:ServiceSystemDevice_IngresoHttpGetIn" />
+      <wsdl:output message="tns:ServiceSystemDevice_IngresoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Update">
+      <wsdl:input message="tns:ServiceSystemDevice_UpdateHttpGetIn" />
+      <wsdl:output message="tns:ServiceSystemDevice_UpdateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Delete">
+      <wsdl:input message="tns:ServiceSystemDevice_DeleteHttpGetIn" />
+      <wsdl:output message="tns:ServiceSystemDevice_DeleteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByIDE">
+      <wsdl:input message="tns:ServiceDeviceByIDEHttpGetIn" />
+      <wsdl:output message="tns:ServiceDeviceByIDEHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllCities">
+      <wsdl:input message="tns:ServiceGetAllCitiesHttpGetIn" />
+      <wsdl:output message="tns:ServiceGetAllCitiesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllTypeDevice">
+      <wsdl:input message="tns:ServiceGetAllTypeDeviceHttpGetIn" />
+      <wsdl:output message="tns:ServiceGetAllTypeDeviceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllSystemDeviceList">
+      <wsdl:input message="tns:ServiceGetAllSystemDeviceListHttpGetIn" />
+      <wsdl:output message="tns:ServiceGetAllSystemDeviceListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByIDE">
+      <wsdl:input message="tns:ServiceCustomerCompanyByIDEHttpGetIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyByIDEHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComunications">
+      <wsdl:input message="tns:ServiceIngrCustomerCompanyDataComunicationsHttpGetIn" />
+      <wsdl:output message="tns:ServiceIngrCustomerCompanyDataComunicationsHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="Service1HttpPost">
+    <wsdl:operation name="ServiceSendDataCameraToNextiva">
+      <wsdl:input message="tns:ServiceSendDataCameraToNextivaHttpPostIn" />
+      <wsdl:output message="tns:ServiceSendDataCameraToNextivaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceTrackingErrorSWG">
+      <wsdl:input message="tns:ServiceTrackingErrorSWGHttpPostIn" />
+      <wsdl:output message="tns:ServiceTrackingErrorSWGHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByCompanyID">
+      <wsdl:input message="tns:ServiceDeviceByCompanyIDHttpPostIn" />
+      <wsdl:output message="tns:ServiceDeviceByCompanyIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrDevice">
+      <wsdl:input message="tns:ServiceIngrDeviceHttpPostIn" />
+      <wsdl:output message="tns:ServiceIngrDeviceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngresoCustomerCompany">
+      <wsdl:input message="tns:ServiceIngresoCustomerCompanyHttpPostIn" />
+      <wsdl:output message="tns:ServiceIngresoCustomerCompanyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeleteCustomerCompanyDataComuni">
+      <wsdl:input message="tns:ServiceDeleteCustomerCompanyDataComuniHttpPostIn" />
+      <wsdl:output message="tns:ServiceDeleteCustomerCompanyDataComuniHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceUpdateCustomerCompanyDataComuni">
+      <wsdl:input message="tns:ServiceUpdateCustomerCompanyDataComuniHttpPostIn" />
+      <wsdl:output message="tns:ServiceUpdateCustomerCompanyDataComuniHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComuni">
+      <wsdl:input message="tns:ServiceIngrCustomerCompanyDataComuniHttpPostIn" />
+      <wsdl:output message="tns:ServiceIngrCustomerCompanyDataComuniHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByCompanyID">
+      <wsdl:input message="tns:ServiceCustomerCompanyDataComuniByCompanyIDHttpPostIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyDataComuniByCompanyIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByID">
+      <wsdl:input message="tns:ServiceCustomerCompanyDataComuniByIDHttpPostIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyDataComuniByIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Ingreso">
+      <wsdl:input message="tns:ServicioCustomerCompany_IngresoHttpPostIn" />
+      <wsdl:output message="tns:ServicioCustomerCompany_IngresoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Update">
+      <wsdl:input message="tns:ServicioCustomerCompany_UpdateHttpPostIn" />
+      <wsdl:output message="tns:ServicioCustomerCompany_UpdateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompany_Delete">
+      <wsdl:input message="tns:ServiceCustomerCompany_DeleteHttpPostIn" />
+      <wsdl:output message="tns:ServiceCustomerCompany_DeleteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerIP">
+      <wsdl:input message="tns:ServiceCustomerCompanyByCustomerIPHttpPostIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyByCustomerIPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerID">
+      <wsdl:input message="tns:ServiceCustomerCompanyByCustomerIDHttpPostIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyByCustomerIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllByCustomer">
+      <wsdl:input message="tns:ServiceCustomerCompanyAllByCustomerHttpPostIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyAllByCustomerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllListDrop">
+      <wsdl:input message="tns:ServiceCustomerCompanyAllListDropHttpPostIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyAllListDropHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanySearchByNameCustomer">
+      <wsdl:input message="tns:ServiceCustomerCompanySearchByNameCustomerHttpPostIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanySearchByNameCustomerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCiudadID">
+      <wsdl:input message="tns:ServiceCustomerCompanyByCiudadIDHttpPostIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyByCiudadIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceAll">
+      <wsdl:input message="tns:ServiceDeviceAllHttpPostIn" />
+      <wsdl:output message="tns:ServiceDeviceAllHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByID">
+      <wsdl:input message="tns:ServiceDeviceByIDHttpPostIn" />
+      <wsdl:output message="tns:ServiceDeviceByIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceAllDeviceByCompanyID">
+      <wsdl:input message="tns:ServiceAllDeviceByCompanyIDHttpPostIn" />
+      <wsdl:output message="tns:ServiceAllDeviceByCompanyIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceGetAll">
+      <wsdl:input message="tns:ServiceSystemDeviceGetAllHttpPostIn" />
+      <wsdl:output message="tns:ServiceSystemDeviceGetAllHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceByID">
+      <wsdl:input message="tns:ServiceSystemDeviceByIDHttpPostIn" />
+      <wsdl:output message="tns:ServiceSystemDeviceByIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Ingreso">
+      <wsdl:input message="tns:ServiceSystemDevice_IngresoHttpPostIn" />
+      <wsdl:output message="tns:ServiceSystemDevice_IngresoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Update">
+      <wsdl:input message="tns:ServiceSystemDevice_UpdateHttpPostIn" />
+      <wsdl:output message="tns:ServiceSystemDevice_UpdateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Delete">
+      <wsdl:input message="tns:ServiceSystemDevice_DeleteHttpPostIn" />
+      <wsdl:output message="tns:ServiceSystemDevice_DeleteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByIDE">
+      <wsdl:input message="tns:ServiceDeviceByIDEHttpPostIn" />
+      <wsdl:output message="tns:ServiceDeviceByIDEHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllCities">
+      <wsdl:input message="tns:ServiceGetAllCitiesHttpPostIn" />
+      <wsdl:output message="tns:ServiceGetAllCitiesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllTypeDevice">
+      <wsdl:input message="tns:ServiceGetAllTypeDeviceHttpPostIn" />
+      <wsdl:output message="tns:ServiceGetAllTypeDeviceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllSystemDeviceList">
+      <wsdl:input message="tns:ServiceGetAllSystemDeviceListHttpPostIn" />
+      <wsdl:output message="tns:ServiceGetAllSystemDeviceListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByIDE">
+      <wsdl:input message="tns:ServiceCustomerCompanyByIDEHttpPostIn" />
+      <wsdl:output message="tns:ServiceCustomerCompanyByIDEHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComunications">
+      <wsdl:input message="tns:ServiceIngrCustomerCompanyDataComunicationsHttpPostIn" />
+      <wsdl:output message="tns:ServiceIngrCustomerCompanyDataComunicationsHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ServiceSendDataCameraToNextiva">
+      <soap:operation soapAction="http://tempuri.org/ServiceSendDataCameraToNextiva" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceTrackingErrorSWG">
+      <soap:operation soapAction="http://tempuri.org/ServiceTrackingErrorSWG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByCompanyID">
+      <soap:operation soapAction="http://tempuri.org/ServiceDeviceByCompanyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrDevice">
+      <soap:operation soapAction="http://tempuri.org/ServiceIngrDevice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngresoCustomerCompany">
+      <soap:operation soapAction="http://tempuri.org/ServiceIngresoCustomerCompany" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeleteCustomerCompanyDataComuni">
+      <soap:operation soapAction="http://tempuri.org/ServiceDeleteCustomerCompanyDataComuni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceUpdateCustomerCompanyDataComuni">
+      <soap:operation soapAction="http://tempuri.org/ServiceUpdateCustomerCompanyDataComuni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComuni">
+      <soap:operation soapAction="http://tempuri.org/ServiceIngrCustomerCompanyDataComuni" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByCompanyID">
+      <soap:operation soapAction="http://tempuri.org/ServiceCustomerCompanyDataComuniByCompanyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByID">
+      <soap:operation soapAction="http://tempuri.org/ServiceCustomerCompanyDataComuniByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Ingreso">
+      <soap:operation soapAction="http://tempuri.org/ServicioCustomerCompany_Ingreso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Update">
+      <soap:operation soapAction="http://tempuri.org/ServicioCustomerCompany_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompany_Delete">
+      <soap:operation soapAction="http://tempuri.org/ServiceCustomerCompany_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerIP">
+      <soap:operation soapAction="http://tempuri.org/ServiceCustomerCompanyByCustomerIP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerID">
+      <soap:operation soapAction="http://tempuri.org/ServiceCustomerCompanyByCustomerID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllByCustomer">
+      <soap:operation soapAction="http://tempuri.org/ServiceCustomerCompanyAllByCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllListDrop">
+      <soap:operation soapAction="http://tempuri.org/ServiceCustomerCompanyAllListDrop" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanySearchByNameCustomer">
+      <soap:operation soapAction="http://tempuri.org/ServiceCustomerCompanySearchByNameCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCiudadID">
+      <soap:operation soapAction="http://tempuri.org/ServiceCustomerCompanyByCiudadID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceAll">
+      <soap:operation soapAction="http://tempuri.org/ServiceDeviceAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByID">
+      <soap:operation soapAction="http://tempuri.org/ServiceDeviceByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceAllDeviceByCompanyID">
+      <soap:operation soapAction="http://tempuri.org/ServiceAllDeviceByCompanyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceGetAll">
+      <soap:operation soapAction="http://tempuri.org/ServiceSystemDeviceGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceByID">
+      <soap:operation soapAction="http://tempuri.org/ServiceSystemDeviceByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Ingreso">
+      <soap:operation soapAction="http://tempuri.org/ServiceSystemDevice_Ingreso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Update">
+      <soap:operation soapAction="http://tempuri.org/ServiceSystemDevice_Update" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Delete">
+      <soap:operation soapAction="http://tempuri.org/ServiceSystemDevice_Delete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByIDE">
+      <soap:operation soapAction="http://tempuri.org/ServiceDeviceByIDE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllCities">
+      <soap:operation soapAction="http://tempuri.org/ServiceGetAllCities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllTypeDevice">
+      <soap:operation soapAction="http://tempuri.org/ServiceGetAllTypeDevice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllSystemDeviceList">
+      <soap:operation soapAction="http://tempuri.org/ServiceGetAllSystemDeviceList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByIDE">
+      <soap:operation soapAction="http://tempuri.org/ServiceCustomerCompanyByIDE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComunications">
+      <soap:operation soapAction="http://tempuri.org/ServiceIngrCustomerCompanyDataComunications" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ServiceSendDataCameraToNextiva">
+      <soap12:operation soapAction="http://tempuri.org/ServiceSendDataCameraToNextiva" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceTrackingErrorSWG">
+      <soap12:operation soapAction="http://tempuri.org/ServiceTrackingErrorSWG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByCompanyID">
+      <soap12:operation soapAction="http://tempuri.org/ServiceDeviceByCompanyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrDevice">
+      <soap12:operation soapAction="http://tempuri.org/ServiceIngrDevice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngresoCustomerCompany">
+      <soap12:operation soapAction="http://tempuri.org/ServiceIngresoCustomerCompany" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeleteCustomerCompanyDataComuni">
+      <soap12:operation soapAction="http://tempuri.org/ServiceDeleteCustomerCompanyDataComuni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceUpdateCustomerCompanyDataComuni">
+      <soap12:operation soapAction="http://tempuri.org/ServiceUpdateCustomerCompanyDataComuni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComuni">
+      <soap12:operation soapAction="http://tempuri.org/ServiceIngrCustomerCompanyDataComuni" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByCompanyID">
+      <soap12:operation soapAction="http://tempuri.org/ServiceCustomerCompanyDataComuniByCompanyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByID">
+      <soap12:operation soapAction="http://tempuri.org/ServiceCustomerCompanyDataComuniByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Ingreso">
+      <soap12:operation soapAction="http://tempuri.org/ServicioCustomerCompany_Ingreso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Update">
+      <soap12:operation soapAction="http://tempuri.org/ServicioCustomerCompany_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompany_Delete">
+      <soap12:operation soapAction="http://tempuri.org/ServiceCustomerCompany_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerIP">
+      <soap12:operation soapAction="http://tempuri.org/ServiceCustomerCompanyByCustomerIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerID">
+      <soap12:operation soapAction="http://tempuri.org/ServiceCustomerCompanyByCustomerID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllByCustomer">
+      <soap12:operation soapAction="http://tempuri.org/ServiceCustomerCompanyAllByCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllListDrop">
+      <soap12:operation soapAction="http://tempuri.org/ServiceCustomerCompanyAllListDrop" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanySearchByNameCustomer">
+      <soap12:operation soapAction="http://tempuri.org/ServiceCustomerCompanySearchByNameCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCiudadID">
+      <soap12:operation soapAction="http://tempuri.org/ServiceCustomerCompanyByCiudadID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceAll">
+      <soap12:operation soapAction="http://tempuri.org/ServiceDeviceAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByID">
+      <soap12:operation soapAction="http://tempuri.org/ServiceDeviceByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceAllDeviceByCompanyID">
+      <soap12:operation soapAction="http://tempuri.org/ServiceAllDeviceByCompanyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceGetAll">
+      <soap12:operation soapAction="http://tempuri.org/ServiceSystemDeviceGetAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceByID">
+      <soap12:operation soapAction="http://tempuri.org/ServiceSystemDeviceByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Ingreso">
+      <soap12:operation soapAction="http://tempuri.org/ServiceSystemDevice_Ingreso" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Update">
+      <soap12:operation soapAction="http://tempuri.org/ServiceSystemDevice_Update" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Delete">
+      <soap12:operation soapAction="http://tempuri.org/ServiceSystemDevice_Delete" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByIDE">
+      <soap12:operation soapAction="http://tempuri.org/ServiceDeviceByIDE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllCities">
+      <soap12:operation soapAction="http://tempuri.org/ServiceGetAllCities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllTypeDevice">
+      <soap12:operation soapAction="http://tempuri.org/ServiceGetAllTypeDevice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllSystemDeviceList">
+      <soap12:operation soapAction="http://tempuri.org/ServiceGetAllSystemDeviceList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByIDE">
+      <soap12:operation soapAction="http://tempuri.org/ServiceCustomerCompanyByIDE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComunications">
+      <soap12:operation soapAction="http://tempuri.org/ServiceIngrCustomerCompanyDataComunications" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpGet" type="tns:Service1HttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ServiceSendDataCameraToNextiva">
+      <http:operation location="/ServiceSendDataCameraToNextiva" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceTrackingErrorSWG">
+      <http:operation location="/ServiceTrackingErrorSWG" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByCompanyID">
+      <http:operation location="/ServiceDeviceByCompanyID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrDevice">
+      <http:operation location="/ServiceIngrDevice" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngresoCustomerCompany">
+      <http:operation location="/ServiceIngresoCustomerCompany" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeleteCustomerCompanyDataComuni">
+      <http:operation location="/ServiceDeleteCustomerCompanyDataComuni" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceUpdateCustomerCompanyDataComuni">
+      <http:operation location="/ServiceUpdateCustomerCompanyDataComuni" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComuni">
+      <http:operation location="/ServiceIngrCustomerCompanyDataComuni" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByCompanyID">
+      <http:operation location="/ServiceCustomerCompanyDataComuniByCompanyID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByID">
+      <http:operation location="/ServiceCustomerCompanyDataComuniByID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Ingreso">
+      <http:operation location="/ServicioCustomerCompany_Ingreso" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Update">
+      <http:operation location="/ServicioCustomerCompany_Update" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompany_Delete">
+      <http:operation location="/ServiceCustomerCompany_Delete" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerIP">
+      <http:operation location="/ServiceCustomerCompanyByCustomerIP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerID">
+      <http:operation location="/ServiceCustomerCompanyByCustomerID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllByCustomer">
+      <http:operation location="/ServiceCustomerCompanyAllByCustomer" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllListDrop">
+      <http:operation location="/ServiceCustomerCompanyAllListDrop" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanySearchByNameCustomer">
+      <http:operation location="/ServiceCustomerCompanySearchByNameCustomer" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCiudadID">
+      <http:operation location="/ServiceCustomerCompanyByCiudadID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceAll">
+      <http:operation location="/ServiceDeviceAll" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByID">
+      <http:operation location="/ServiceDeviceByID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceAllDeviceByCompanyID">
+      <http:operation location="/ServiceAllDeviceByCompanyID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceGetAll">
+      <http:operation location="/ServiceSystemDeviceGetAll" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceByID">
+      <http:operation location="/ServiceSystemDeviceByID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Ingreso">
+      <http:operation location="/ServiceSystemDevice_Ingreso" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Update">
+      <http:operation location="/ServiceSystemDevice_Update" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Delete">
+      <http:operation location="/ServiceSystemDevice_Delete" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByIDE">
+      <http:operation location="/ServiceDeviceByIDE" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllCities">
+      <http:operation location="/ServiceGetAllCities" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllTypeDevice">
+      <http:operation location="/ServiceGetAllTypeDevice" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllSystemDeviceList">
+      <http:operation location="/ServiceGetAllSystemDeviceList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByIDE">
+      <http:operation location="/ServiceCustomerCompanyByIDE" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComunications">
+      <http:operation location="/ServiceIngrCustomerCompanyDataComunications" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1HttpPost" type="tns:Service1HttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ServiceSendDataCameraToNextiva">
+      <http:operation location="/ServiceSendDataCameraToNextiva" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceTrackingErrorSWG">
+      <http:operation location="/ServiceTrackingErrorSWG" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByCompanyID">
+      <http:operation location="/ServiceDeviceByCompanyID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrDevice">
+      <http:operation location="/ServiceIngrDevice" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngresoCustomerCompany">
+      <http:operation location="/ServiceIngresoCustomerCompany" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeleteCustomerCompanyDataComuni">
+      <http:operation location="/ServiceDeleteCustomerCompanyDataComuni" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceUpdateCustomerCompanyDataComuni">
+      <http:operation location="/ServiceUpdateCustomerCompanyDataComuni" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComuni">
+      <http:operation location="/ServiceIngrCustomerCompanyDataComuni" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByCompanyID">
+      <http:operation location="/ServiceCustomerCompanyDataComuniByCompanyID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyDataComuniByID">
+      <http:operation location="/ServiceCustomerCompanyDataComuniByID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Ingreso">
+      <http:operation location="/ServicioCustomerCompany_Ingreso" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServicioCustomerCompany_Update">
+      <http:operation location="/ServicioCustomerCompany_Update" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompany_Delete">
+      <http:operation location="/ServiceCustomerCompany_Delete" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerIP">
+      <http:operation location="/ServiceCustomerCompanyByCustomerIP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCustomerID">
+      <http:operation location="/ServiceCustomerCompanyByCustomerID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllByCustomer">
+      <http:operation location="/ServiceCustomerCompanyAllByCustomer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyAllListDrop">
+      <http:operation location="/ServiceCustomerCompanyAllListDrop" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanySearchByNameCustomer">
+      <http:operation location="/ServiceCustomerCompanySearchByNameCustomer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByCiudadID">
+      <http:operation location="/ServiceCustomerCompanyByCiudadID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceAll">
+      <http:operation location="/ServiceDeviceAll" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByID">
+      <http:operation location="/ServiceDeviceByID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceAllDeviceByCompanyID">
+      <http:operation location="/ServiceAllDeviceByCompanyID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceGetAll">
+      <http:operation location="/ServiceSystemDeviceGetAll" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDeviceByID">
+      <http:operation location="/ServiceSystemDeviceByID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Ingreso">
+      <http:operation location="/ServiceSystemDevice_Ingreso" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Update">
+      <http:operation location="/ServiceSystemDevice_Update" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceSystemDevice_Delete">
+      <http:operation location="/ServiceSystemDevice_Delete" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceDeviceByIDE">
+      <http:operation location="/ServiceDeviceByIDE" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllCities">
+      <http:operation location="/ServiceGetAllCities" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllTypeDevice">
+      <http:operation location="/ServiceGetAllTypeDevice" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceGetAllSystemDeviceList">
+      <http:operation location="/ServiceGetAllSystemDeviceList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceCustomerCompanyByIDE">
+      <http:operation location="/ServiceCustomerCompanyByIDE" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ServiceIngrCustomerCompanyDataComunications">
+      <http:operation location="/ServiceIngrCustomerCompanyDataComunications" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://192.168.10.27:8777/ServiceGateway.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://192.168.10.27:8777/ServiceGateway.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpGet" binding="tns:Service1HttpGet">
+      <http:address location="http://192.168.10.27:8777/ServiceGateway.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1HttpPost" binding="tns:Service1HttpPost">
+      <http:address location="http://192.168.10.27:8777/ServiceGateway.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

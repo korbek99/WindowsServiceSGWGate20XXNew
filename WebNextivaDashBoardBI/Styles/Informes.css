@@ -1,0 +1,119 @@
+﻿.btnGenerarInforme {
+    margin-left: 45px;
+    box-shadow: 2px 2px 5px #999; 
+}
+.filtroInicial {
+    display: block;
+    width: 180px;
+    border-radius: 10px;
+    float: left; 
+    padding: 10px;
+    border: 1px solid #FF8300;
+    margin-left: 45px;
+    background-color: #d0d0d0;
+    box-shadow: 2px 2px 5px #999; 
+}
+
+.segundoFiltroTareas {
+    display: none;
+    width: 250px;
+    border-radius: 5px;
+    float: left; 
+    padding: 10px;
+    border: 1px solid #FF8300;
+    margin-left: 45px;
+    background-color: #d0d0d0;
+    box-shadow: 2px 2px 5px #999; 
+}
+
+.segundoFiltroAutomovil {
+    display: none;
+    width: 460px;
+    border-radius: 5px;
+    float: left; 
+    padding: 10px;
+    border: 1px solid #FF8300;
+    margin-left: 45px;
+    background-color: #d0d0d0;
+    box-shadow: 2px 2px 5px #999; 
+}
+
+.tercerFiltroTareas {
+    display: none;
+    width: 200px;
+    border-radius: 5px;
+    float: left; 
+    padding: 10px;
+    border: 1px solid #FF8300;
+    margin-left: 45px;
+    background-color: #d0d0d0;
+    box-shadow: 2px 2px 5px #999; 
+}
+
+.tercerFiltroAutomovil {
+    display: none;
+    width: 400px;
+    border-radius: 5px;
+    float: left; 
+    padding: 10px;
+    border: 1px solid #FF8300;
+    margin-left: 45px;
+    background-color: #d0d0d0;
+    box-shadow: 2px 2px 5px #999; 
+}
+
+
+.tercerFiltroAutomovilSolicitado {
+    display: none;
+    width: 220px;
+    border-radius: 5px;
+    float: left; 
+    padding: 10px;
+    border: 1px solid #FF8300;
+    margin-left: 45px;
+    background-color: #d0d0d0;
+    box-shadow: 2px 2px 5px #999; 
+}
+
+.rangoDeFechas {
+     display: none;
+    width: 220px;
+    border-radius: 5px;
+    float: left; 
+    padding: 10px;
+    border: 1px solid #FF8300;
+    margin-left: 45px;
+    background-color: #d0d0d0;
+    box-shadow: 2px 2px 5px #999; 
+}
+
+.largoTxtFecha {
+    width: 100px;
+}
+
+fieldset {
+    border-radius: 5px;
+    
+}
+
+
+.contenedorInforme 
+{
+    display: none;
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    box-shadow: 2px 2px 5px #999;
+}
+
+.tituloInforme {
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #d0d0d0;
+    box-shadow: 2px 2px 5px #999;
+    text-align: center
+}

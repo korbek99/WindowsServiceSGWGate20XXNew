@@ -1,0 +1,409 @@
+﻿/* DEFAULTS
+----------------------------------------------------------*/
+
+body
+{
+    background: #FEFCFF;
+    font-size: .80em;
+    font-family: "Helvetica Neue" , "Lucida Grande" , "Segoe UI" , Arial, Helvetica, Verdana, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;
+}
+
+.precio
+{
+    font-family: Trebuchet MS;
+    font-size: 19pt;
+}
+
+.login
+{
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.userName
+{
+    float: left;
+}
+
+fieldset
+{
+    background: #ececec;
+    border: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #bdbdbd;
+    width: 97%;
+}
+
+fieldset ol
+{
+    padding: 0;
+    list-style: none;
+}
+
+fieldset ol li
+{
+    padding-bottom: 5px;
+}
+
+label.checkbox
+{
+    display: inline;
+}
+
+input, textarea, .input
+{
+    border: 1px solid #DADADA;
+    background: #fff;
+    color: #333;
+    font-size: 1.2em;
+    margin: 5px 0 6px 0;
+    padding: 5px;
+    width: 300px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+textarea, .textarea
+{
+    font-family: inherit;
+    width: 500px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+input:focus, textarea:focus, select:focus
+{
+    border: 1px solid #7ac0da;
+}
+
+input[type="checkbox"]
+{
+    background: transparent;
+    border: inherit;
+    width: auto;
+    margin-right: 2px;
+}
+
+input[type="image"]
+{
+    background-color: inherit;
+    border: none;
+    width: inherit;
+}
+
+input[type="radio"]
+{
+    background: transparent;
+    border: inherit;
+    width: 30px;
+    margin-right: 2px;
+}
+
+input[type="submit"], input[type="button"], button
+{
+    background-color: #d3dce0;
+    border: 1px solid #787878;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 7px;
+    margin-right: 8px;
+    width: auto;
+}
+
+td input[type="submit"], td input[type="button"], td button
+{
+    padding: 4px;
+    margin-right: 4px;
+}
+select
+{
+    background: none repeat scroll 0 0 #FAFAFA;
+    color: #5D5D5D;
+    border-color: #DADADA;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 12px;
+    height: 34px;
+    padding: 7px;
+    border-style: solid;
+    border-width: 1px;
+    line-height: 1em;
+    vertical-align: middle;
+    width: 312px;
+    margin: 0;
+}
+
+
+/*body
+{
+    background: #eee;
+    margin: 0;
+    padding: 0;
+    font-family: Segoe UI,Tahoma,Arial,Verdana,sans-serif;
+}*/
+
+.loading-modal
+{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; /*display:    none;*/
+    background: #f2f2f2 url('../Images/pIkfp.gif') no-repeat 50% 50%;
+}
+
+/* When the body has the loading class, we turn the scrollbar off with overflow:hidden */
+body.loading
+{
+    overflow: hidden;
+}
+
+.example
+{
+    background: #fff url(../images/blue.jpg);
+    width: 700px;
+    height: 500px;
+    border: 1px #000 solid;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+/* MENU */
+/* main menu styles */
+.menu
+{
+    background-color: #FFBC75;
+    text-align: right;
+    width: 100%;
+}
+.menu > span
+{
+    display: inline-block;
+    margin: 0 auto;
+}
+#nav
+{
+    display: inline;
+    text-align: left;
+    position: relative;
+    list-style-type: none;
+}
+#nav > li
+{
+    float: left;
+    padding: 0;
+    position: relative;
+}
+#nav > li > a
+{
+    border: 1px solid transparent;
+    color: #4F4F4F;
+    display: block;
+    font-size: 90%;
+    padding: 3px 10px;
+    position: relative;
+    text-decoration: none;
+}
+#nav > li > a:hover
+{
+    background-color: #e4ecf4;
+    border-color: #999;
+}
+#nav > li.selected > a
+{
+    background-color: #FFFFFF;
+    border-color: #999999 #999999 #FFFFFF;
+    z-index: 2;
+}
+#nav li div
+{
+    position: relative;
+}
+#nav li div div
+{
+    background-color: #FFFFFF;
+    border: 1px solid #999999;
+    padding: 12px 0;
+    display: none;
+    font-size: 0.75em;
+    margin: 0;
+    position: absolute;
+    top: -1px;
+    z-index: 1;
+    width: 190px;
+}
+#nav li div div.wrp2
+{
+    width: 380px;
+}
+#nav .sep
+{
+    left: 190px;
+    border-left: 1px solid #E3E3E3;
+    bottom: 0;
+    height: auto;
+    margin: 15px 0;
+    position: absolute;
+    top: 0;
+    width: 1px;
+}
+#nav li div ul
+{
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    width: 170px;
+    float: left;
+    list-style-type: none;
+}
+#nav li div ul li
+{
+    margin: 0;
+    padding: 0;
+}
+#nav li div ul li h3
+{
+    border-bottom: 1px solid #E3E3E3;
+    color: #4F4F4F;
+    font-weight: bold;
+    margin: 0 5px 4px;
+    font-size: 0.95em;
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+#nav li ul ul
+{
+    padding: 0 0 8px;
+}
+#nav li ul ul li
+{
+    margin: 0;
+    padding: 0;
+}
+#nav li ul ul li a
+{
+    color: #0060A6;
+    display: block;
+    margin-bottom: 1px;
+    padding: 3px 5px;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+#nav li ul ul li a:hover
+{
+    background-color: #0060a6;
+    color: #fff;
+}
+/*FIN MENU*/
+
+
+/*UPLOAD CONTROL*/
+
+.fileUploadQueueItem
+{
+    font: 11px Verdana, Geneva, sans-serif;
+    background-color: #F5F5F5;
+    border: 3px solid #E5E5E5;
+    margin-top: 5px;
+    padding: 10px;
+    width: 300px;
+}
+.fileUploadQueueItem .cancel
+{
+    float: right;
+}
+.fileUploadProgress
+{
+    background-color: #FFFFFF;
+    border-top: 1px solid #808080;
+    border-left: 1px solid #808080;
+    border-right: 1px solid #C5C5C5;
+    border-bottom: 1px solid #C5C5C5;
+    margin-top: 10px;
+    width: 100%;
+}
+.fileUploadProgressBar
+{
+    background-color: #0099FF;
+}
+
+/*FIN UPLOAD CONTROL*/
+
+
+/*GRILLAS Y TABLAS*/
+
+    .EU_TableScroll
+        {
+            max-height: 275px;
+            overflow: auto;
+            border:1px solid #ccc;
+           
+        }
+        .EU_DataTable
+        {
+            border-collapse: collapse;
+            width: auto;
+        }
+            .EU_DataTable tr th
+            {
+                background-color: #3c454f;
+                color: #ffffff;
+                padding: 10px 5px 10px 5px;
+                border: 1px solid #cccccc;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 12px;
+                font-weight: normal;
+                text-transform:capitalize;
+            }
+            .EU_DataTable tr:nth-child(2n+2)
+            {
+                
+            }
+
+            .EU_DataTable tr:nth-child(2n+1) td
+            {
+             
+                color: #454545;
+            }
+            .EU_DataTable tr td
+            {
+                padding: 5px 10px 5px 10px;
+                color: #454545;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 11px;
+                border: 1px solid #cccccc;
+                vertical-align: middle;
+            }
+                .EU_DataTable tr td:first-child
+                {
+                    text-align: center;
+                }
+
+/*FIN GRILLAS*/
+
+.searchTable
+{
+    background-color: Yellow;
+}
+
+.spnPrincipal
+{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Trebuchet MS;
+}

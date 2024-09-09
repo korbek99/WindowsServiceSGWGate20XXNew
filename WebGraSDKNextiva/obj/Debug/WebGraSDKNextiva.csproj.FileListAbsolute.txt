@@ -1,0 +1,5 @@
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\WebGraSDKNextiva\bin\WebGraSDKNextiva.dll
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\WebGraSDKNextiva\bin\WebGraSDKNextiva.pdb
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\WebGraSDKNextiva\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\WebGraSDKNextiva\obj\Debug\WebGraSDKNextiva.dll
+C:\Users\JoseBustos\Documents\Visual Studio 2013\Projects\2- C#  Sample\WebGraSDKNextiva\obj\Debug\WebGraSDKNextiva.pdb

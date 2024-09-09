@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SitePrincipal.master.cs" Inherits="WebNextivaDashBoardBI.SitePrincipal" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+         <meta name="viewport" content="width=device-width" />
+         <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+         <link href="Css/estilo.css" rel="stylesheet" />
+         <link href="Css/StyleMenu.css" rel="stylesheet" />
+         <link href="Css/Stylepopu.css" rel="stylesheet" />
+         <link href="Css/fade-popup.css" rel="stylesheet" />
+        <script src="js/jquery-1.7.2.js"></script>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            <div class="contenedor">
+                <div class="top1_bmp"></div>
+                <div class="top2_bmp">
+                    <div class="top2margen">
+                        <div class="logo_bmp"><img src="../images/logo.png"  /></div>
+                        <div class="menu_bmp"><img src="images/ico_salir.png"/><a href="#">SALIR</a></div>
+                        <div class="sep_bmp"> &nbsp;&nbsp;<img src="images/separador.png"/>&nbsp;&nbsp;</div>
+                        <div class="menu_bmp"><img src="images/ico_home.png"/><a href="#">HOME</a></div>
+                        <div class="sep_bmp">&nbsp;&nbsp;<img src="images/separador.png"/>&nbsp;&nbsp;</div>
+      
+                          <%--<div class="menu_bmp">
+                              <ul>
+                                          <li>
+                                             <img src="../../Images/ico_menu.png" alt="menu" />MENU
+                                            <ul>
+                                              <li><a  href="../Fin/GeneracionFactDoc.aspx">Generacion Fact Doc</a></li>
+                                              <li><a  href="../Fin/GeneracionFRFF.aspx">Generacion FRFF</a></li>
+                                              <li><a  href="../Fin/GeneracionOC.aspx">Generacion OC</a></li>
+                                              <li><a  href="../Fin/GenerarFondoPorRendir.aspx">Generar Fondo Por Rendir</a></li>
+                                              <li><a  href="../Fin/RendicionFRFF.aspx">Rendicion FRFF</a></li>
+                                              <li><a  href="../Fin/SolicitudProvee.aspx">Solicitud Ingreso Proveedor</a></li>
+                                              <li><a  href="../MovBanca/MovimientoBcoMant.aspx">Movimiento Banco</a></li>
+                                            </ul>
+                                          </li>
+                                        </ul>
+                          </div>--%>
+       
+                   </div>
+                </div>
+            </div>
+            <div class="fondo_bmp">
+                <div class="sombra_bmp"></div>
+                <div class="titulo_bmp">
+                    <div class="ico"><img src="images/icon_documento_.png"/></div>
+                    <h1>
+                        Administrador Sistema Estadistica</h1>
+                    <h2>
+                        <img src="images/ico_user.png"/>Juan Perez</h2>
+                </div>
+            </div>
+            <br />
+            <div class="cuadro_blanco_bmp" >
+                
+             </div>
+                   <%-- <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+                    Administrador Sistema Estadistica</h1>
+                    <h2>
+                        <img src="images/ico_user.png"/>Juan Perezenter--%>
+                        
+                        
+      </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+<footer>
+    <%--<div class="content-wrapper">
+        <div class="float-left">
+            <%--<p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+        </div>
+    </div>--%>
+</footer>
+</html>

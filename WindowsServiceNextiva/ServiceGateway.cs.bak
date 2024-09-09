@@ -1,0 +1,893 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Linq;
+using System.ServiceProcess;
+using System.Text;
+using WindowsServiceNextiva.ServiceReference1;
+using NetClient;
+using System.IO;
+using System.Security.Permissions;
+using System.Xml.Linq;
+using System.Xml;
+using WindowsServiceNextiva.Entities;
+
+namespace WindowsServiceNextiva
+{
+    public partial class ServiceGateway : ServiceBase
+    {
+        public int Param_CustomerCompanyID;
+        public int int_LogonID = 0;
+        public int LogonSystem = 0;
+        public string IPCustomer = "";
+        public int int_AlarmInfIDE = 0;
+        public int int_AlarmInfChannel = 0;
+        public int int_AlarmInfState = 0;
+        public int int_AlarmInfEventType = 0;
+        public int int_AlarmInfRuleID = 0;
+        public string str_AlarmInfRuleDescrip = "";
+        public int int_AlarmInTargetID = 0;
+        public int int_AlarmInfTargetType = 0;
+        public string str_AlarmInfrctTarget = "";
+        public int int_AlarmInfTargetSpeed = 0;
+        public int int_AlarmInfTargetDirection = 0;
+        public int param_customercompanyID;
+        public string param_customercompanyIDE;
+        public string str_CustomerIDE;
+
+        public string str_msgEmptyField = "";
+        public string str_AlarmInfIDE_msg = "";
+        public string str_AlarmInfChannel_msg = "";
+        public string str_AlarmInfState_msg = "";
+        public string str_AlarmInfEventType_msg = "";
+        public string str_AlarmInfRuleID_msg = "";
+        public string str_AlarmInTargetID_msg = "";
+        public string str_AlarmInfTargetType_msg = "";
+        public string str_AlarmInfrctTarget_msg = "";
+        public string str_AlarmInfTargetSpeed_msg = "";
+        public string str_AlarmInfTargetDirection_msg = "";
+        public Boolean b_IniAplication;
+
+        private const int T_AUDIO8 = 0;
+        private const int T_YUV420 = 1;
+        private const int T_YUV422 = 2;
+
+        private RECVDATA_NOTIFY RecvDataNotify = null;
+        private COMRECV_NOTIFY ComRecvNotify = null;
+        private DECYUV_NOTIFY DecYuvNotify = null;
+
+        private MAIN_NOTIFY_V4 MainNotify_V40 = null;
+
+        private ALARM_NOTIFY_V4 AlarmNotify_V40 = null;
+
+        //private static FileStream fsSdv = null;
+        //private static FileStream fsYuv = null;
+        //private static FileStream fsPcm = null;
+
+        private const int FTP_CMD_SET_SNAPSHOT = 0;
+        private const int FTP_CMD_GET_SNAPSHOT = 4;
+
+        private string strContinuousSnapPath;
+        private int m_iSnapCount = 0;
+        private System.Timers.Timer tTimer;
+
+        public String hourMinute;
+        public String hourMinuteAux;
+        public int int_filaMatrix = 0;
+        public string[][] AlarmsArray = new string[20][];
+
+        public string cDeviceType;
+        public string cComFormat;
+        public string str_VCARules;
+
+        VideoWindow[] m_video;
+        CONNECT_STATE[] m_conState;
+        CLIENTINFO m_cltInfo;
+        NVS_FILE_LPBUF m_lpbuf;
+        PNVS_LOG_QUERY m_logquery;
+
+        int m_iCurrentFrame = 0;
+        const int CONST_iFrameNum = 16;
+        int m_iDBClick = 0;
+        bool m_blNSClick = false;
+
+        //private System.ComponentModel.IContainer components;
+        private System.Diagnostics.EventLog eventLog1;
+        //public string strProxy = "";
+        //public string strIP = "192.168.10.225";
+        //public string strUser = "admin";
+        //public string strPwd = "1111";
+        //public string strProxyID = "";
+        //public int iPort = 3000;
+
+        public string strProxy = "";
+        public string strIP = "";
+        public string strUser = "";
+        public string strPwd = "";
+        public string strProxyID = "";
+        public int iPort = 0;
+
+        public int CustomerID;
+
+        public string[] ArrayDataCustomers = new string[10];
+        public string[][] ArrayDevices = new string[10][];
+        public string tempo_CustomerIDE;
+        public List<Customer> ListCostumers = new List<Customer>();
+        public List<Device> ListDevice = new List<Device>();
+
+        public List<AlarmInfomation> ListStoreAlarms = new List<AlarmInfomation>();
+
+        public ServiceGateway()
+	    {
+		    InitializeComponent();
+            m_cltInfo.m_iServerID = -1;
+            readXMLFile();
+           // CopyDllsFilesToClient();
+           // StartUp();
+          
+	    }
+
+        private Boolean readXMLFile()
+        {
+            Boolean esExito = false;
+            Boolean existData = false;
+            ServiceGateParameters ObjParams = new ServiceGateParameters();
+            try
+            {
+                string rutaxml = ObjParams.ServiceGateParamPath; // @"C:\XML\xmlconfig.xml";
+                 XmlTextReader reader = new XmlTextReader(rutaxml);
+                while (reader.Read()) 
+                {
+                    switch (reader.NodeType) 
+                    {
+                        case XmlNodeType.Element: // The node is an element.
+                            Console.Write("<" + reader.Name);
+                            Console.WriteLine(">");
+
+                            if (string.Equals(reader.Name, "CustomerCompanyIDE"))
+                            {
+                                existData = true;
+                            }
+                            break;
+                        case XmlNodeType.Text: //Display the text in each element.
+                            Console.WriteLine (reader.Value);
+
+                            if (existData == true)
+                            {
+                                param_customercompanyIDE = reader.Value.Replace("'", "");
+                                existData = false;
+                            }
+                            break;
+                        case XmlNodeType.EndElement: //Display the end of the element.
+                            Console.Write("</" + reader.Name);
+                            Console.WriteLine(">");
+                            break;
+                    }
+                }
+
+                if (!String.IsNullOrEmpty(param_customercompanyIDE))
+                { 
+                     //Llenar listas con datos
+                    DataSet dsCustomers = new DataSet();
+                    DataSet dsDevice = new DataSet();
+                    Service1SoapClient ObjSoap = new Service1SoapClient();
+                    dsCustomers = ObjSoap.ServiceCustomerCompanyByIDE(param_customercompanyIDE);
+                    //dsCustomers = ObjSoap.ServiceCustomerCompanyAllByCustomer();
+                    string tempo_CustomerIDE = param_customercompanyIDE.Replace(".", "");
+
+                    if (dsCustomers.Tables[0].Rows.Count > 0)
+                    {
+                        foreach (DataRow dataRow in dsCustomers.Tables[0].Rows)
+                        {
+                           // str_CustomerIDE = dataRow[1].ToString().Replace(".", "");
+                           //// sPepe = sPepe.Replace(".", "");
+                           // if (str_CustomerIDE == tempo_CustomerIDE)
+                           // {
+                                 Param_CustomerCompanyID = Convert.ToInt32(dataRow[0].ToString());
+
+                                //ListCostumers.Add(new Customer()
+                                //{
+                                //    CustomerCompanyID = Convert.ToInt32(dataRow[0].ToString()),
+                                //    CustomerCompanyIDE = Convert.ToString(dataRow[1].ToString()),
+                                //    CustomerCompanyName = dataRow[2].ToString(),
+                                //    CustomerCompanyDir = dataRow[3].ToString(),
+                                //    CustomerCompanyPhone = dataRow[4].ToString(),
+                                //    CustomerCompanyCelPhone = dataRow[5].ToString(),
+                                //    CustomerCompanyEmail = dataRow[6].ToString(),
+                                //  //  CustomerCompanyFax = dataRow[7].ToString(),
+                                // //  CustomerCompanyWebSite = dataRow[8].ToString(),
+                                //    CiudadID =  Convert.ToInt32(dataRow[9].ToString()),
+                                //   // CustomerCompanyDateIng = Convert.ToDateTime(dataRow[10].ToString()),
+                                //    CustomerCompanyState = Convert.ToInt32(dataRow[11].ToString())
+                                //   // CustomerCompanyShort = dataRow["CustomerCompanyShort"].ToString()
+                                //});
+                            //}
+                        } 
+                    }
+
+                    dsDevice = ObjSoap.ServiceAllDeviceByCompanyID(Param_CustomerCompanyID);
+
+                    if (dsDevice.Tables[0].Rows.Count > 0)
+                    {
+                        foreach (DataRow dataRow in dsDevice.Tables[0].Rows)
+                        {
+                                ListDevice.Add(new Device()
+                                {
+                                    DeviceID = Convert.ToInt32(dataRow["ID"].ToString()),
+                                    DeviceIDE = Convert.ToString(dataRow["IDE"].ToString()),
+                                    DeviceNameDescrip = dataRow["Name"].ToString(),
+                                    TypeDeviceID = Convert.ToInt32(dataRow["TypeDeviceID"].ToString()),
+                                    CustomerCompanyID = Convert.ToInt32(dataRow["CompanyID"].ToString()),
+                                    DeviceChannel = Convert.ToInt32(dataRow["Channel"].ToString()),
+                                    DeviceIDLogon = dataRow["Logon"].ToString(),
+                                    DeviceIP = dataRow["IP"].ToString(),
+                                    DeviceUser = dataRow["Users"].ToString(),
+                                    DevicePass = dataRow["Pass"].ToString(),
+                                    DevicePort = dataRow["Port"].ToString(),
+                                    //DeviceDateIng = Convert.ToDateTime(dataRow["DeviceDateIng"].ToString()),
+                                    DeviceEstado = Convert.ToInt32(dataRow["DeviceEstado"].ToString())
+                                 //   SystemDeviceID = Convert.ToInt32(dataRow["SystemDeviceID"].ToString()),
+                                    //TypeDeviceDescrip = dataRow["TypeDeviceDescrip"].ToString(),
+                                    //SystemDeviceDescrip = dataRow["SystemDeviceDescrip"].ToString(),
+                                    //CustomerCompanyDescrip = dataRow["CustomerCompanyDescrip"].ToString()
+                                });
+                        }
+                    }
+                    //Load parameters
+                }
+
+            }catch (Exception ex){
+               
+                WinServiceTrackingErrorSWG(DateTime.Today, Environment.MachineName, "Remote Windows Service SWG", 6, "ERROR reading XML Data  : " + ex.ToString(), 1, 1, "WindowsServiceNextiva/readXMLFile");
+            }
+            return esExito;
+        }
+        public void OnDebug()
+        {
+            OnStart(null);
+        }
+        private void StartUpInicial()
+        {
+            string ParamIP;
+
+            foreach (Device element in ListDevice)
+            {
+                ParamIP = element.DeviceIP; // "192.168.10.225";
+                // establecer el puerto de red por defecto utilizado por el cliente y el maestro 
+                NVSSDK.NetClient_SetPort(Convert.ToInt32(element.DevicePort), 6000);
+                //establecer el identificador de notificación de mensajes
+                NVSSDK.NetClient_SetMSGHandle(SDKConstMsg.WM_MAIN_MESSAGE, this.Handle, SDKConstMsg.MSG_PARACHG, SDKConstMsg.MSG_ALARM);
+                //inicia SDK
+                NVSSDK.NetClient_Startup();
+                //Inicializar la biblioteca NSLook
+                NVSSDK.NSLook_Startup();
+
+                // Establece la entrega  de llamada de aterrizaje
+                MainNotify_V40 = MyMAIN_NOTIFY_V4;
+                AlarmNotify_V40 = MyAlarm_NOTIFY_V4;
+                NVSSDK.NetClient_SetNotifyFunction_V4(MainNotify_V40, AlarmNotify_V40, null, null, null);
+
+                m_conState = new CONNECT_STATE[16];
+                m_video = new VideoWindow[16];
+                for (int i = 0; i < 16; i++)
+                {
+                    m_conState[i].m_iChannelNO = -1;
+                    m_conState[i].m_iLogonID = -1;
+                    m_conState[i].m_uiConID = UInt32.MaxValue;
+                    m_video[i] = new VideoWindow();
+                    //  m_video[i].Hide();
+                    m_video[i].pnlVideo.TabIndex = i;
+                    //m_video[i].pnlVideo.Click += new EventHandler(Video_Click);
+                    //m_video[i].pnlVideo.DoubleClick += new EventHandler(Video_DBClick);
+                }
+
+                strProxy = "";
+                strIP = element.DeviceIP;
+                strUser = element.DeviceUser;
+                strPwd = element.DevicePass;
+                CustomerID = element.CustomerCompanyID;
+                strProxyID = "";
+                iPort = Convert.ToInt32(element.DevicePort);
+                IPCustomer = "192.168.10.56"; // element.DeviceIP;
+                LogonAuto();
+                ConnectAuto();
+                PlayAuto();
+            }
+            InitializeTimer();
+        }
+        private void StartUp()
+        {
+           string ParamIP;
+              
+            try
+            {
+
+              //  ParamIP = "192.168.10.225";
+                hourMinute = DateTime.Now.ToString("HH:mm");
+                int_filaMatrix = 1;
+
+                // establecer el puerto de red por defecto utilizado por el cliente y el maestro 
+                NVSSDK.NetClient_SetPort(3000, 6000);
+                //establecer el identificador de notificación de mensajes
+                NVSSDK.NetClient_SetMSGHandle(SDKConstMsg.WM_MAIN_MESSAGE, this.Handle, SDKConstMsg.MSG_PARACHG, SDKConstMsg.MSG_ALARM);
+                //inicia SDK
+                NVSSDK.NetClient_Startup();
+                //Inicializar la biblioteca NSLook
+                NVSSDK.NSLook_Startup();
+
+                // Establece la entrega  de llamada de aterrizaje
+                MainNotify_V40 = MyMAIN_NOTIFY_V4;
+                AlarmNotify_V40 = MyAlarm_NOTIFY_V4;
+                NVSSDK.NetClient_SetNotifyFunction_V4(MainNotify_V40, AlarmNotify_V40, null, null, null);
+
+                m_conState = new CONNECT_STATE[16];
+                m_video = new VideoWindow[16];
+                for (int i = 0; i < 16; i++)
+                {
+                    m_conState[i].m_iChannelNO = -1;
+                    m_conState[i].m_iLogonID = -1;
+                    m_conState[i].m_uiConID = UInt32.MaxValue;
+                    m_video[i] = new VideoWindow();
+                    //  m_video[i].Hide();
+                    m_video[i].pnlVideo.TabIndex = i;
+                    //m_video[i].pnlVideo.Click += new EventHandler(Video_Click);
+                    //m_video[i].pnlVideo.DoubleClick += new EventHandler(Video_DBClick);
+                }
+                //this.Controls.AddRange(m_video);
+                //cboChannel.SelectedIndex = 1;
+                //cboMode.SelectedIndex = 1;
+                //cboScreen.SelectedIndex = 1;
+                //cboStream.SelectedIndex = 1;
+                //DisplayWindows(2);
+                //btnDSMLogon.Tag = -1;
+
+
+               
+               
+            }
+            catch (Exception ex)
+            {
+                WinServiceTrackingErrorSWG(DateTime.Today, Environment.MachineName, "Remote Windows Service SWG", 6, "Error : " + ex.ToString(), 1, 1, "WindowsServiceNextiva/StartUp");
+            }
+        }
+
+        private void MyMAIN_NOTIFY_V4(UInt32 _ulLogonID, IntPtr _iWparam, IntPtr _iLParam, Int32 _iUser)
+        {
+            switch (_iWparam.ToInt32())
+            {
+                case SDKConstMsg.WCM_LOGON_NOTIFY:
+                    {
+                        m_conState[m_iCurrentFrame].m_iLogonID = (int)_ulLogonID;
+                        switch (_iLParam.ToInt32())
+                        {
+                            case SDKConstMsg.LOGON_SUCCESS:
+                                //MessageBox.Show("LOGON_SUCCESS notify_v4");
+                                break;
+                            case SDKConstMsg.LOGON_TIMEOUT:
+                                // MessageBox.Show("LOGON_TIMEOUT notify_v4");
+                                WinServiceTrackingErrorSWG(DateTime.Today, Environment.MachineName, "Remote Windows Service SWG", 6, "Error : LOGON_TIMEOUT notify_v4", 1, 1, "WindowsServiceNextiva/MyMAIN_NOTIFY_V4");
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    }
+                default:
+                    break;
+            }
+        }
+        private void MyAlarm_NOTIFY_V4(Int32 _ulLogonID, Int32 _iChan, Int32 _iAlarmState, Int32 _iAlarmType, Int32 _iUser)
+        {
+            int cantidadtrips = 0;
+            StringBuilder sbAlarmMsg = new StringBuilder("AlarmMsg-", 128);
+
+            sbAlarmMsg.Append(DateTime.Now.ToLocalTime().ToString());
+
+            switch (_iAlarmType)
+            {
+                case AlarmConstMsgType.ALARM_VDO_MOTION:
+                    sbAlarmMsg.Append("- MOTION");
+                    break;
+                case AlarmConstMsgType.ALARM_VDO_REC:
+                    sbAlarmMsg.Append("- REC");
+                    break;
+                case AlarmConstMsgType.ALARM_VDO_LOST:
+                    sbAlarmMsg.Append("- LOST");
+                    break;
+                case AlarmConstMsgType.ALARM_VDO_INPORT:
+                    sbAlarmMsg.Append("- INPORT");
+                    break;
+                case AlarmConstMsgType.ALARM_VDO_OUTPORT:
+                    sbAlarmMsg.Append("- OUTPORT");
+                    break;
+                case AlarmConstMsgType.ALARM_VDO_COVER:
+                    sbAlarmMsg.Append("- COVER");
+                    break;
+                case AlarmConstMsgType.ALARM_VCA_INFO:
+                    sbAlarmMsg.Append("- VCA");
+                    break;
+                default:
+                    sbAlarmMsg.Append("-" + _iAlarmType.ToString());
+                    break;
+            }
+            // int estado_Alarma = 0;
+            switch (_iAlarmState)
+            {
+                case 0:
+                    sbAlarmMsg.Append("- OFF");
+                    break;
+                case 1:
+                    sbAlarmMsg.Append("- ON");
+                    //estado_Alarma = 1;
+                    break;
+                default:
+                    sbAlarmMsg.Append("-" + _iAlarmState.ToString());
+                    break;
+            }
+           // lbAlarmlistBox.Items.Insert(0, sbAlarmMsg.ToString());
+
+            switch (_iAlarmType)
+            {
+                case AlarmConstMsgType.ALARM_VCA_INFO:
+
+                    sbAlarmMsg.Append("- VCA");
+                    // Get Channels camera
+                    int iChannelNumber = 0;
+
+                    int iretu = NVSSDK.NetClient_GetChannelNum(_ulLogonID, ref iChannelNumber);
+                    int channelCamera = iChannelNumber;
+
+                    int int_rule = 0;
+                    int iBufSiz = 80;
+
+                    m_lpbuf = new NVS_FILE_LPBUF();
+
+                    int iRetx = NVSSDK.NetClient_VCAGetAlarmInfo(int_LogonID, _iAlarmState, ref m_lpbuf, iBufSiz);
+
+                    //int AlarmSentChannel;
+                    //int AlarmSentCustCompanyID;
+                    //string AlarmSentDateIng;
+                    //string AlarmSentDescription;
+                    //int AlarmSentEstado;
+                    //string AlarmSentIDE;
+                    //string AlarmSentrctTarget;
+                    //string AlarmSentRuleDescrip;
+                    //int AlarmSentRuleID;
+                    //int AlarmSentState;
+                    //int AlarmSentTargetDirection;
+                    //int AlarmSentTargetID;
+                    //int AlarmSentTargetSpeed;
+                    //int AlarmSentTargetType;
+                    //int AlarmSentventType;
+
+                    try {
+                        Console.WriteLine("Sending received alerts : {0} ", "MyAlarm_NOTIFY_V4" + " " + DateTime.Today.ToString());
+                            
+                            //AlarmSentChannel = channelCamera;
+                            //AlarmSentCustCompanyID = CustomerID;
+                            //AlarmSentDateIng = Convert.ToString(DateTime.Today);
+                            //AlarmSentDescription = sbAlarmMsg.ToString();
+                            //AlarmSentEstado = _iAlarmState;
+                            //AlarmSentIDE = "192.168.10.225"; // cantidadtrips++;
+                            //AlarmSentrctTarget = "";
+                            //AlarmSentRuleDescrip = sbAlarmMsg.ToString();
+                            //AlarmSentRuleID = int_rule;
+                            //AlarmSentState = _iAlarmState;
+                            //AlarmSentTargetDirection = 0;
+                            //AlarmSentTargetID = Convert.ToInt32(_iAlarmState.ToString());
+                            //AlarmSentTargetSpeed = 0;
+                            //AlarmSentTargetType = _iAlarmType;
+                            //AlarmSentventType = _iAlarmType;
+
+                        AlarmInfomation objeto = new AlarmInfomation();
+                        str_VCARules = sbAlarmMsg.ToString();
+                        objeto.AlarmInfChannel = channelCamera; // m_lpbuf.m_iChannel;
+                        objeto.AlarmInfEventType = _iAlarmType;
+                        objeto.AlarmInfID = cantidadtrips++; // m_lpbuf.m_iID;
+                        objeto.AlarmInfIDE = IPCustomer; //"192.168.10.225"; //cantidadtrips++;   
+                        objeto.AlarmInfrctTarget = "";
+                        objeto.AlarmInfRuleID = int_rule; //AlarmConstMsgType.ALARM_VCA_INFO; // VCAConfiguration.VCA_RULE0_TRIPWIRE; //m_lpbuf.m_iRuleID; 
+                        objeto.AlarmInfRuleDescrip = sbAlarmMsg.ToString();
+                        objeto.AlarmInfState = _iAlarmState;
+                        objeto.AlarmInfTargetDirection = 0;
+                        objeto.AlarmInfTargetSpeed = 0;
+                        objeto.AlarmInfTargetType = _iAlarmType;
+                        objeto.AlarmInTargetID = Convert.ToInt32(_iAlarmState.ToString());
+                        objeto.AlarmInfDescription = str_VCARules.ToString();// sbAlarmMsg.ToString();
+                        objeto.AlarmInfCostuCompany = CustomerID;
+                        objeto.AlarmInfDateEvent = DateTime.Now;
+
+                        ListStoreAlarmas(objeto);
+
+                        //SendAlarmsToNextivaSWG(AlarmSentChannel,
+                        //                            AlarmSentCustCompanyID,
+                        //                            AlarmSentDateIng,
+                        //                            AlarmSentDescription,
+                        //                            AlarmSentEstado,
+                        //                            AlarmSentIDE,
+                        //                            AlarmSentrctTarget,
+                        //                            AlarmSentRuleDescrip,
+                        //                            AlarmSentRuleID,
+                        //                            AlarmSentState,
+                        //                            AlarmSentTargetDirection,
+                        //                            AlarmSentTargetID,
+                        //                            AlarmSentTargetSpeed,
+                        //                            AlarmSentTargetType,
+                        //                            AlarmSentventType);
+
+                        } catch (Exception ex){
+                            Console.WriteLine("Error Remote Windows Service SWG : {0} ", "MyAlarm_NOTIFY_V4" + " " + DateTime.Today.ToString());
+                            WinServiceTrackingErrorSWG(DateTime.Today, Environment.MachineName, "Remote Windows Service SWG", 6, "Error : " + ex.ToString(), 1, 1, "WindowsServiceNextiva/MyAlarm_NOTIFY_V4");
+                        }
+
+                        //if (SentNextivaAutomatico(objeto) == true)
+                        //{
+                        //    sbAlarmMsg.Append(" - enviado a  Nextiva");
+                        //}
+                        //else
+                        //{
+                        //   // lblMensaje.Text = "Ocurrio un error envio alarma";
+                        //}
+                    
+                    //sbAlarmMsg.Append(" - Ocurrio un error envio alarma");
+                  //  ListSentNextiva.Items.Insert(0, str_VCARules + " - " + sbAlarmMsg.ToString());
+                    return;
+                    // }
+                    break;
+                default:
+                    sbAlarmMsg.Append("-" + _iAlarmType.ToString());
+                    break;
+            }
+        }
+        private void InitializeTimer()
+        {
+            // Call this procedure when the application starts.
+            // Set to 1 second.
+            timer1.Interval = 1000;
+            timer1.Tick += new EventHandler(Timer1_Tick);
+
+            // Enable timer.
+            timer1.Enabled = true;
+
+            //Button1.Text = "Stop";
+            //Button1.Click += new EventHandler(Button1_Click);
+        }
+        private void Timer1_Tick(object Sender, EventArgs e)
+        {
+            int AlarmSentChannel;
+            int AlarmSentCustCompanyID;
+            string AlarmSentDateIng;
+            string AlarmSentDescription;
+            int AlarmSentEstado;
+            string AlarmSentIDE;
+            string AlarmSentrctTarget;
+            string AlarmSentRuleDescrip;
+            int AlarmSentRuleID;
+            int AlarmSentState;
+            int AlarmSentTargetDirection;
+            int AlarmSentTargetID;
+            int AlarmSentTargetSpeed;
+            int AlarmSentTargetType;
+            int AlarmSentventType;
+
+            if (ListStoreAlarms.Count > 0)
+            {
+                foreach (var items in ListStoreAlarms)
+                {
+
+                    AlarmSentChannel = items.AlarmInfChannel;
+                    AlarmSentventType = items.AlarmInfEventType;
+                    //objeto.AlarmInfID = items.AlarmInfID;
+                    AlarmSentIDE = items.AlarmInfIDE;
+                    AlarmSentrctTarget = "";
+                    AlarmSentRuleID = items.AlarmInfRuleID;
+                    AlarmSentRuleDescrip = items.AlarmInfRuleDescrip;
+                    AlarmSentEstado = 1;
+                    AlarmSentState = items.AlarmInfState;
+                    AlarmSentTargetDirection = 0;
+                    AlarmSentTargetSpeed = 0;
+                    AlarmSentTargetType = items.AlarmInfEventType;
+                    AlarmSentTargetID = Convert.ToInt32(items.AlarmInfState);
+                    AlarmSentDescription = items.AlarmInfRuleDescrip;
+                    AlarmSentCustCompanyID = items.AlarmInfCostuCompany;
+                    AlarmSentDateIng = Convert.ToString(items.AlarmInfDateEvent);
+
+                    SendAlarmsToNextivaSWG( AlarmSentChannel,
+                                                      AlarmSentCustCompanyID,
+                                                     AlarmSentDateIng,
+                                                     AlarmSentDescription,
+                                                     AlarmSentEstado,
+                                                     AlarmSentIDE,
+                                                     AlarmSentrctTarget,
+                                                     AlarmSentRuleDescrip,
+                                                     AlarmSentRuleID,
+                                                     AlarmSentState,
+                                                     AlarmSentTargetDirection,
+                                                     AlarmSentTargetID,
+                                                     AlarmSentTargetSpeed,
+                                                     AlarmSentTargetType,
+                                                     AlarmSentventType);
+                }
+                
+              
+            }
+
+        }
+        private void ListStoreAlarmas(AlarmInfomation objeto)
+        {
+            int int_canti_trips = 0;
+            if (objeto.AlarmInTargetID > 0)
+            {
+                ListStoreAlarms.Add(new AlarmInfomation()
+                {
+                    AlarmInfChannel = objeto.AlarmInfChannel,// m_lpbuf.m_iChannel;
+                    AlarmInfEventType = objeto.AlarmInfEventType,//_iAlarmType,
+                    AlarmInfID = int_canti_trips++, //cantidadtrips++, // m_lpbuf.m_iID;
+                    AlarmInfIDE = objeto.AlarmInfIDE,//cantidadtrips++,
+                    AlarmInfrctTarget = "",
+                    AlarmInfRuleID = objeto.AlarmInfRuleID, //AlarmConstMsgType.ALARM_VCA_INFO; // VCAConfiguration.VCA_RULE0_TRIPWIRE; //m_lpbuf.m_iRuleID; 
+                    AlarmInfRuleDescrip = objeto.AlarmInfRuleDescrip,
+                    AlarmInfState = objeto.AlarmInfState,
+                    AlarmInfTargetDirection = 0,
+                    AlarmInfTargetSpeed = 0,
+                    AlarmInfTargetType = objeto.AlarmInfEventType,
+                    AlarmInTargetID = Convert.ToInt32(objeto.AlarmInfState),
+                    AlarmInfDescription = str_VCARules.ToString(),// sbAlarmMsg.ToString();
+                    AlarmInfCostuCompany = objeto.AlarmInfCostuCompany,
+                    AlarmInfDateEvent = objeto.AlarmInfDateEvent
+
+                });
+            }
+        }
+        private void SendAlarmsToNextivaSWG(int AlarmSentChannel,
+                                                     int AlarmSentCustCompanyID,
+                                                    string AlarmSentDateIng,
+                                                    string AlarmSentDescription,
+                                                    int AlarmSentEstado,
+                                                    string AlarmSentIDE,
+                                                    string AlarmSentrctTarget,
+                                                    string AlarmSentRuleDescrip,
+                                                    int AlarmSentRuleID,
+                                                    int AlarmSentState,
+                                                    int AlarmSentTargetDirection,
+                                                    int AlarmSentTargetID,
+                                                    int AlarmSentTargetSpeed,
+                                                    int AlarmSentTargetType,
+                                                    int AlarmSentventType)
+        {
+            Service1SoapClient ObjSoap = new Service1SoapClient();
+            Boolean esExito = false;
+            try
+            {
+                esExito = ObjSoap.ServiceSendDataCameraToNextiva(AlarmSentChannel,
+                                                      AlarmSentCustCompanyID,
+                                                     AlarmSentDateIng,
+                                                     AlarmSentDescription,
+                                                     AlarmSentEstado,
+                                                     AlarmSentIDE,
+                                                     AlarmSentrctTarget,
+                                                     AlarmSentRuleDescrip,
+                                                     AlarmSentRuleID,
+                                                     AlarmSentState,
+                                                     AlarmSentTargetDirection,
+                                                     AlarmSentTargetID,
+                                                     AlarmSentTargetSpeed,
+                                                     AlarmSentTargetType,
+                                                     AlarmSentventType);
+
+                if (esExito == false)
+                {
+                    Console.WriteLine("Excepcion WindowsServiceNextiva/SendAlarmsToNextivaSWG : {0}", "Error :  Data was not sent to nextiva " + DateTime.Today.ToString());
+                    WinServiceTrackingErrorSWG(DateTime.Today, Environment.MachineName, "Remote Windows Service SWG", 6, "Error :  Data was not sent to nextiva ", 1, 1, "WindowsServiceNextiva/SendAlarmsToNextivaSWG");
+                }else {
+                    Console.WriteLine("Alarm event was successfully sent to Nextiva : {0}", "Alarm event was sent" + DateTime.Today.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Excepcion WindowsServiceNextiva/SendAlarmsToNextivaSWG : {0}", "Error : "+ ex.ToString() + " " + DateTime.Today.ToString());
+                WinServiceTrackingErrorSWG(DateTime.Today, Environment.MachineName, "Remote Windows Service SWG", 6, "Error : " + ex.ToString(), 1, 1, "WindowsServiceNextiva/SendAlarmsToNextivaSWG");
+            }
+
+        }
+        protected override void OnStart(string[] args)
+	    {
+		    //eventLog1.WriteEntry("In OnStart");
+            DataSet dsCustomers = new DataSet();
+            CreateFileClient();
+            dsCustomers = GetDataClient(Param_CustomerCompanyID);
+            //LogonAuto();
+            //ConnectAuto();
+            //PlayAuto();
+
+            StartUpInicial();
+	    }
+        private void ConnectAuto()
+        {
+            m_cltInfo.m_iChannelNo = 1; // cboChannel.SelectedIndex;
+            m_cltInfo.m_iNetMode = 1; //cboMode.SelectedIndex + 1;
+            m_cltInfo.m_iStreamNO = 1; //cboStream.SelectedIndex;
+
+            m_cltInfo.m_cNetFile = new char[255];
+            m_cltInfo.m_cRemoteIP = new char[16];
+            Array.Copy(strIP.ToCharArray(), m_cltInfo.m_cRemoteIP, strIP.Length);
+            UInt32 uiConID = m_conState[m_iCurrentFrame].m_uiConID;
+
+            //获得当前窗口对应的视频播放状态
+            int iRet = NVSSDK.NetClient_GetPlayingStatus(uiConID);
+
+            //如果正在播放视频，不进行连接操作
+            if (iRet != SDKConstMsg.PLAYER_PLAYING)
+            {
+                int iChannelNum = 0;
+
+                //获得当前窗口连接的网络视频服务器最大通道数
+                NVSSDK.NetClient_GetChannelNum(m_cltInfo.m_iServerID, ref iChannelNum);
+
+                //判断是否超过最大通道号
+                if (m_cltInfo.m_iChannelNo >= iChannelNum)
+                {
+                     //  MessageBox.Show("Max Channel is " + iChannelNum);
+                     // ACA Channel
+                     // cboChannel.SelectedIndex = iChannelNum - 1;
+                    return;
+                }
+                //开始接收一路视频数据	
+                iRet = NVSSDK.NetClient_StartRecv(ref uiConID, ref m_cltInfo, null);
+
+                //操作失败，清除结构体m_conState的信息
+                if (iRet < 0)
+                {
+                    m_conState[m_iCurrentFrame].m_iLogonID = -1;
+                    m_conState[m_iCurrentFrame].m_uiConID = UInt32.MaxValue;
+                    m_conState[m_iCurrentFrame].m_iChannelNO = -1;
+                    //MessageBox.Show("Connect failed !");
+                    return;
+                }
+                //操作成功，更新结构体m_conState的信息
+                m_conState[m_iCurrentFrame].m_iLogonID = m_cltInfo.m_iServerID;
+                m_conState[m_iCurrentFrame].m_iChannelNO = m_cltInfo.m_iChannelNo;
+                m_conState[m_iCurrentFrame].m_uiConID = uiConID;
+                m_conState[m_iCurrentFrame].m_iStreamNO = m_cltInfo.m_iStreamNO;
+
+                //开始导出收到的数据
+                NVSSDK.NetClient_StartCaptureData(uiConID);
+                if (iRet == 1)
+                {
+                    RECT rect = new RECT();
+
+                    //开始播放某路视频
+                    NVSSDK.NetClient_StartPlay(uiConID, m_video[m_iCurrentFrame].pnlVideo.Handle, rect, 0);
+                   // btnPlay.Text = "Stop";
+
+                  //  GetWindowStates();
+                }
+               // btnConnect.Text = "Disconnect";
+            }
+        
+        }
+
+        private void PlayAuto()
+        {
+            //当前窗口没有连接，退出
+            if (m_conState[m_iCurrentFrame].m_uiConID == UInt32.MaxValue)
+            {
+                return;
+            }
+            //string strCaption = btnPlay.Text;
+            int iRet;
+            //if (strCaption == "Play") //显示视频
+            //{
+                RECT rect = new RECT();
+
+                //开始播放视频
+                iRet = NVSSDK.NetClient_StartPlay
+                (
+                    m_conState[m_iCurrentFrame].m_uiConID,
+                    m_video[m_iCurrentFrame].pnlVideo.Handle,
+                    rect,
+                    0
+                );
+                if (iRet == 0)
+                {
+                   // btnPlay.Text = "Stop";
+                }
+            //}
+            //else //停止播放
+            //{
+            //    //停止接受视频数据
+            //    iRet = NVSSDK.NetClient_StopCaptureData(m_conState[m_iCurrentFrame].m_uiConID);
+
+            //    //停止播放某路视频
+            //    iRet = NVSSDK.NetClient_StopPlay(m_conState[m_iCurrentFrame].m_uiConID);
+            //    m_video[m_iCurrentFrame].Invalidate(true);
+            //    btnPlay.Text = "Play";
+            //}
+        }
+
+        private void LogonAuto()
+        {
+            int iRet;
+            try
+            {
+                iRet = NVSSDK.NetClient_Logon(strProxy, strIP, strUser, strPwd, strProxyID, iPort);
+                if (iRet < 0)
+                {
+                    m_cltInfo.m_iServerID = -1;
+                    WinServiceTrackingErrorSWG(DateTime.Today, Environment.MachineName, "Remote Windows Service SWG", 6, "Error : Logon failed!", 1, 1, "WindowsServiceNextiva/LogonAuto");
+                    return;
+                }
+                m_cltInfo.m_iServerID = iRet;
+            }
+            catch (Exception ex)
+            {
+                WinServiceTrackingErrorSWG(DateTime.Today, Environment.MachineName, "Remote Windows Service SWG", 6, "Error : " + ex.ToString(), 1, 1, "WindowsServiceNextiva/LogonAuto");
+            }
+        }
+        protected override void OnStop()
+	    {
+		   // eventLog1.WriteEntry("In onStop.");
+            System.IO.File.Create(AppDomain.CurrentDomain.BaseDirectory + "OnStop File " + DateTime.Now.Date.ToString());
+            WinServiceTrackingErrorSWG(DateTime.Today, Environment.MachineName, "Remote Windows Service SWG", 6, "Error : Remote Windows Service ('" + Environment.MachineName + "') Stopped ", 1, 1, "WindowsServiceNextiva/OnStop");
+	    }
+
+
+        private void CreateFileClient()
+        {
+            System.IO.File.Create(AppDomain.CurrentDomain.BaseDirectory + "FileClientTest.txt");
+        }
+        private DataSet GetDataClient(int CompanyID)
+        {
+            DataSet ds = new DataSet();
+            Service1SoapClient ObjSoap = new Service1SoapClient();
+            try
+            {
+                ds = ObjSoap.ServiceCustomerCompanyByCustomerID(CompanyID);
+                Console.WriteLine("Satisfactory WebService Conection : {0} ", "GetDataClient" + " " + DateTime.Today.ToString());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Excepcion WindowsServiceNextiva/GetDataClient : {0}", "Error : " + ex.ToString() + " " + DateTime.Today.ToString());
+                WinServiceTrackingErrorSWG(DateTime.Today, Environment.MachineName, "Remote Windows Service SWG", 6, "Error : " + ex.ToString(), 1, 1, "WindowsServiceNextiva/GetDataClient");
+            }
+
+            return ds;
+        }
+        private Boolean WebServiceConectionsSWG()
+        {
+
+            Boolean esExito = false;
+
+            try
+            {
+                esExito = true;
+            }
+            catch (Exception ex)
+            {
+
+                esExito = false;
+                WinServiceTrackingErrorSWG(DateTime.Today, Environment.MachineName, "Remote Windows Service SWG", 6, "Error : WebService Conection failed", 1, 1, "WindowsServiceNextiva/WebServiceConectionsSWG");
+            }
+            return esExito;
+        }
+
+        private void WinServiceTrackingErrorSWG(DateTime Fecha,
+                  string MachineName,
+                  string UserName,
+                  int IdSistema,
+                  string Mensaje,
+                  int Resuelto,
+                  int NumeroError,
+                  string Modulo)
+        {
+            Console.WriteLine("Sending bugs found : {0} ", "WinServiceTrackingErrorSWG" + " " + DateTime.Today.ToString());
+            Service1SoapClient ObjSoap = new Service1SoapClient();
+            ObjSoap.ServiceTrackingErrorSWG(Fecha, MachineName, UserName, IdSistema, Mensaje, Resuelto, NumeroError, Modulo);
+
+        }
+
+        public IntPtr Handle { get; set; }
+    }
+}

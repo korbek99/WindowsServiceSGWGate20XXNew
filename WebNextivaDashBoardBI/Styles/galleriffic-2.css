@@ -1,0 +1,269 @@
+div.content
+{
+    /* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
+    display: none;
+    float: right;
+    width: 550px;
+    padding-top: 5px;
+}
+
+h1
+{
+    margin-top: 5px;
+    margin-left: 5px;
+    float: left;
+    font-family: 'Titillium Web' , sans-serif;
+    text-decoration: none;
+    color: #666;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.linealight
+{
+    width: 100%;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    float: left;
+    border-bottom: 1px dotted #999999;
+}
+
+div.content a, div.navigation a
+{
+    text-decoration: none;
+    color: #777;
+    padding-right: 5px;
+}
+div.content a:focus, div.content a:hover, div.content a:active
+{
+    text-decoration: underline;
+}
+div.controls
+{
+    margin-top: 5px;
+    height: 23px;
+}
+div.controls a
+{
+    padding: 5px;
+}
+div.ss-controls
+{
+    float: left;
+}
+div.nav-controls
+{
+    float: right;
+    padding-right: 16px;
+}
+div.slideshow-container
+{
+    position: relative;
+    clear: both;
+    height: 380px; /* This should be set to be at least the height of the largest image in the slideshow */
+}
+div.loader
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url('../Images/loader.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 550px;
+    height: 502px; /* This should be set to be at least the height of the largest image in the slideshow */
+}
+div.slideshow
+{
+}
+div.slideshow span.image-wrapper
+{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+div.slideshow a.advance-link
+{
+    display: block;
+    width: 550px;
+    height: 390px; /* This should be set to be at least the height of the largest image in the slideshow */
+    line-height: 50px; /* This should be set to be at least the height of the largest image in the slideshow */
+    text-align: center;
+}
+div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited
+{
+    text-decoration: none;
+}
+div.slideshow img
+{
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+div.download
+{
+    /*float: right;*/
+    height: 80px;
+    background: url("../Images/galeria_foto.png");
+    background-repeat: no-repeat;
+    background-position: left;
+    width: 765px; /*padding-top: 55px;*/
+    position: fixed !important;
+    right: 45px;
+    top: 460px;
+    z-index: 10 !important;
+}
+
+div.download a
+{
+    float: right;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-top: 5px;
+    color: #514D4A;
+    font-family: 'Titillium Web' , sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+div.download hr
+{
+    border: 0;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #333;
+    height: 0;
+}
+
+.linea
+{
+    width: 690px;
+    height: 2px;
+    margin-left: 75px;
+    margin-right: auto;
+    margin-top: 0px;
+    float: left;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted #666666;
+}
+
+div.caption-container
+{
+    position: relative;
+    clear: left;
+    height: 75px;
+}
+span.image-caption
+{
+    display: block;
+    position: absolute;
+    width: 550px;
+    top: 0;
+    left: 0;
+}
+div.caption
+{
+    padding: 12px;
+}
+div.image-title
+{
+    font-weight: bold;
+    font-size: 1.4em;
+}
+div.image-desc
+{
+    line-height: 1.3em;
+    padding-top: 12px;
+}
+div.navigation
+{
+    /* The navigation style is set using jQuery so that the javascript specific styles won't be applied unless javascript is enabled. */
+    padding-top: 5px;
+}
+ul.thumbs
+{
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+ul.thumbs li
+{
+    float: left;
+    padding: 0;
+    margin: 5px 10px 5px 0;
+    list-style: none;
+    border: 1px solid #DCDCDC;
+    text-align: center;
+}
+
+a.thumb
+{
+    padding: 2px;
+    display: block;
+    border: 1px solid #ccc;
+}
+ul.thumbs li.selected a.thumb
+{
+    background: #DCDCDC;
+    border: 1px solid #EF970C;
+}
+a.thumb:focus
+{
+    outline: none;
+}
+ul.thumbs img
+{
+    border: none;
+    display: inline-block;
+}
+div.pagination
+{
+    clear: both;
+}
+div.navigation div.top
+{
+    margin-bottom: 12px;
+    height: 11px;
+}
+div.navigation div.bottom
+{
+    margin-top: 12px;
+}
+div.pagination a, div.pagination span.current, div.pagination span.ellipsis
+{
+    display: block;
+    float: left;
+    margin-right: 2px;
+    padding: 4px 7px 2px 7px;
+    border: 1px solid #ccc;
+    font-family: 'Titillium Web' , sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+}
+div.pagination a:hover
+{
+    background-color: #eee;
+    text-decoration: none;
+}
+div.pagination span.current
+{
+    font-weight: bold;
+    background-color: #F19A22;
+    border-color: #FDE7CC;
+    color: #FDE7CC;
+    font-family: 'Titillium Web' , sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+}
+div.pagination span.ellipsis
+{
+    border: none;
+    padding: 5px 0 3px 2px;
+}
